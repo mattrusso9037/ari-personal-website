@@ -2,8 +2,8 @@ import React from "react";
 import { ThemeType } from "./themeType";
 
 export interface IThemeState {
-    theme: ThemeType;
-    setTheme: () => void;
+    theme: ThemeType | null;
+    setTheme: (type: ThemeType) => void;
 }
 
 export const initialThemeState: IThemeState = {
@@ -11,4 +11,4 @@ export const initialThemeState: IThemeState = {
     setTheme: () => null
 };
 
-export const ThemeContext = React.createContext({});
+export const ThemeContext = React.createContext<IThemeState>(initialThemeState);

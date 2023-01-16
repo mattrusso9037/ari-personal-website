@@ -5,7 +5,7 @@ import { ThemeType } from "./themeType";
 const THEME_LOCAL_STORAGE_KEY: string = 'abrennan-theme';
 
 const ThemeProvider: React.FC = ({ children }) => {
-    const [theme, setTheme] = useState(initialThemeState.theme);
+    const [theme, setTheme] = useState<ThemeType | null>(null);
     const { localStorage } = window;
 
     useEffect(() => {
@@ -17,7 +17,9 @@ const ThemeProvider: React.FC = ({ children }) => {
     }, []);
 
     useEffect(() => {
-        localStorage.setItem(THEME_LOCAL_STORAGE_KEY, theme);
+        if (theme) {
+            localStorage.setItem(THEME_LOCAL_STORAGE_KEY, theme);
+        }
     }, [theme]);
 
     return (
