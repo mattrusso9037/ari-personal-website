@@ -10,19 +10,22 @@ import {
 } from 'react-router-dom';
 import {About} from "./components/About/About";
 import {NavBar} from "./components/Navbar/NavBar";
+import ThemeProvider from './contexts/theme/themeProvider';
 
 ReactDOM.render(
     <BrowserRouter>
+    <ThemeProvider>
         <NavBar />
         <Routes>
             <Route path='/' element={<App />} />
             <Route path='about' element={<About />} />
         </Routes>
+        </ThemeProvider>
     </BrowserRouter>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
+// If you want to start measuring performance in your app, pass aF function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
