@@ -30,8 +30,6 @@ export const Header: FC<IHeaderProps> =
                 nextTheme = ThemeType.LIGHT;
             }
 
-            console.log('THEME', nextTheme);
-
             setTheme(nextTheme);
         }
 
