@@ -19,7 +19,7 @@ $box_shadow_light: 2px 3px 5px -1px #999999;
 $bodyLineHeight: 32px;
 
 $max_width: 850px;
-$navBarHeight: 50px;
+$navBarHeight: 56px;
 
 $mobileLeftPadding: $baseUnit*2px;
 $mobileTopPadding: $baseUnit*4px;
@@ -49,3 +49,7 @@ $headerColor: $blush;
 $navBarColor: $mauve;
 $footerColor: $mauve;
 $paragraphColor: $black75;
+
+$buttonBorderRadius: 10px;
+$header1FontFamily: 'Lato, Sans Serif';
+$header1FontSize: 1.5rem;

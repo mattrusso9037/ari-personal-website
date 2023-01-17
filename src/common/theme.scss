@@ -3,10 +3,19 @@
 $themes: (
     light: (
         backgroundColor: $white,
-
+        bodyTextColor: $black75,
+        navbarBackgroundColor: $mauve,
+        header1FontFamily: $header1FontFamily,
+        header1FontSize: $header1FontSize,
+        header1TextColor: $mocha,
     ),
     dark: (
       backgroundColor: $black75,
+      bodyTextColor: $white,
+      navbarBackgroundColor: $mauve,
+      header1FontFamily: $header1FontFamily,
+      header1FontSize: $header1FontSize,
+      header1TextColor: $white,
     )
 );
 

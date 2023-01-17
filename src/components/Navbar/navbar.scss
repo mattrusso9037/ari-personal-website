@@ -1,57 +1,92 @@
 @import '../../common/variables';
+@import '../../common/theme';
+
 $transition: all .3s ease-in;
+
 .Navbar {
-  > .link_container {
-    height: $navBarHeight;
+  >.navbar_wrapper {
+    @include themed() {
+      background: getThemedValue('navbarBackgroundColor');
+    }
+    color: $white;
     position: fixed;
+    height: $navBarHeight;
     display: flex;
     z-index: 3;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
-    gap: #{$baseUnit*2}px;
-    width: 100%;
-    padding-left: #{$baseUnit*2}px;
+    width: calc(100% - #{$baseUnit*2}px);
+    padding: 0 #{$baseUnit}px;
     background: transparent;
     transition: $transition;
-    > li {
-      list-style-type: none;
-
-      &.hide {
-        transform: translateY(-100%);
+    > div {
+      display: flex;
+      gap: #{$baseUnit}px;
+      align-items: center;
+      >.tagline {
+        display: flex;
+        gap: #{$baseUnit}px;
       }
+    }
+    >.link_container {
+      height: 100%;
+      display: inherit;
+      align-items: center;
+      gap: #{$baseUnit*2}px;
 
-      > a {
-        text-decoration: none;
-        color: white;
-        border-bottom: 0 solid white;
-        &:hover {
-          border-bottom: 1px solid white;
+      >li {
+        list-style-type: none;
+        padding: 10px;
+        border-radius: $buttonBorderRadius;
+        &.active {
+          background: $caramel;
+      
+          > a {
+            color: $black75;
+            &:hover {
+              border-bottom: 1px solid $black75;
+            }
+          }
+        }
+        &.hide {
+          transform: translateY(-100%);
+        }
+
+        >a {
+          text-decoration: none;
+          color: white;
+          border-bottom: 0 solid white;
+
+          &:hover {
+            border-bottom: 1px solid white;
+          }
         }
       }
     }
-  }
 
-  .nav_underlay {
-    position: fixed;
-    width: 100%;
-    height: $navBarHeight;
-    background: black;
-    left: 0;
-    z-index: 1;
-    transition: $transition;
-    transform: translateY(-100%);
-  }
-
-  &.show {
     .nav_underlay {
-      transform: translateY(0);
-      opacity: .8;
-    }
-  }
-
-  &.hide {
-    .nav_underlay, .link_container {
+      position: fixed;
+      width: 100%;
+      height: $navBarHeight;
+      background: black;
+      left: 0;
+      z-index: 1;
+      transition: $transition;
       transform: translateY(-100%);
+    }
+
+    &.show {
+      .nav_underlay {
+        transform: translateY(0);
+        opacity: .8;
+      }
+    }
+
+    &.hide {
+      .nav_underlay,
+      .link_container {
+        transform: translateY(-100%);
+      }
     }
   }
 
