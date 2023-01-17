@@ -38,6 +38,7 @@ $transition: all .3s ease-in;
         list-style-type: none;
         padding: 10px;
         border-radius: $buttonBorderRadius;
+        transition: $transition;
         &.active {
           background: $caramel;
       
