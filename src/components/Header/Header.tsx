@@ -2,8 +2,6 @@ import React, { FC, useContext } from 'react';
 import './header.scss';
 import { ScrollTo } from '../../hooks/useScroll';
 import { Sections } from '../Main/SectionTypes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { ThemeContext } from '../../contexts/theme/themeContext';
 import { ThemeType } from '../../contexts/theme/themeType';
 
@@ -35,15 +33,7 @@ export const Header: FC<IHeaderProps> =
 
         return (
             <div className={'Header'}>
-                <div>
-                    <div>
-                        <h1>Hi I'm Ariana, an aspiring UX designer<br />from Long Island, New York.</h1>
-                        <button onClick={onThemeClick}>Toggle Theme</button>
-                    </div>
-                    <div>
-                        <FontAwesomeIcon className={'fa-thin'} onClick={onClick} icon={faChevronDown} color={'white'} size={'3x'} />
-                    </div>
-                </div>
+                <h1>Hi I'm Ariana, an aspiring UX designer<br />from Long Island, New York.</h1>
             </div>
         )
     };
