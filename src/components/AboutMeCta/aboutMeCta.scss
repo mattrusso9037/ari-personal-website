@@ -51,6 +51,8 @@ $transformation: all .5s ease;
   .AboutMeCta {
     padding-top: #{$baseUnit*6}px;
     padding-bottom: #{$baseUnit*6}px;
+    flex-direction: column-reverse !important;
+    align-items: center;
 
     .AboutMeCta {
       margin-top: #{$baseUnit}px;

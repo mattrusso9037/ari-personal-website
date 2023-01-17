@@ -1,12 +1,12 @@
 import * as React from 'react';
-import {Section} from '../common/Section/Section';
-import {Icon} from '../common/Icon';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faGithubSquare} from '@fortawesome/free-brands-svg-icons';
-import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import {faDownload} from '@fortawesome/free-solid-svg-icons';
-import {Button} from '../common/Button/Button';
+import { Section } from '../common/Section/Section';
+import { Icon } from '../common/Icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { Button } from '../common/Button/Button';
 import './contact.scss';
 
 interface IContactProps {
@@ -15,9 +15,10 @@ interface IContactProps {
 const ICON_SIZE = '4x';
 
 enum Link {
-    GitHub = 'https://github.com/mattrusso9037',
-    Linkedin = 'https://www.linkedin.com/in/matt-russo9037/',
-    Email = 'mattrusso9037@gmail.com',
+    Dribble = 'https://dribbble.com/ari_b2183',
+    Behance = 'https://www.behance.net/arianabrennan',
+    Linkedin = 'https://www.linkedin.com/in/abrennan6115120/',
+    Email = 'abrennan418@gmail.com',
 }
 
 export const Contact: React.FC<IContactProps> = () => {
@@ -29,24 +30,21 @@ export const Contact: React.FC<IContactProps> = () => {
         }
     }
 
-    function onResumeClick(): void {
-        window.open('/assets/matt-russo-resume.pdf', 'blank');
-    }
-
     return (
         <Section className={'Contact Me'} title={''} icon={Icon.Communication}>
             <div className={'Contact'}>
                 <h2>
-                    Let's Get In Touch
+                    Get In Touch
                 </h2>
                 <div className={'action_container'}>
                     <div className={'social_container'}>
-                        <FontAwesomeIcon icon={faGithubSquare} size={ICON_SIZE} onClick={() => openLink(Link.GitHub)} />
-                        <FontAwesomeIcon icon={faLinkedin} size={ICON_SIZE} onClick={() => openLink(Link.Linkedin)} />
-                        <FontAwesomeIcon icon={faEnvelope} size={ICON_SIZE} onClick={() => openLink(Link.Email)} />
+                        <img src={'assets/icons/email.svg'}  onClick={() => openLink(Link.Email)} />
+                        <img src={'assets/icons/linkedin.svg'} onClick={() => openLink(Link.Linkedin)} />
+                        <img src={'assets/icons/dribble.svg'} onClick={() => openLink(Link.Dribble)} />
+                        <img src={'assets/icons/behance.svg'} onClick={() => openLink(Link.Behance)} />
                     </div>
-                    <div className={'resume_container'}>
-                        <Button icon={faDownload} type={'secondary'} text={'Resume'} onClick={onResumeClick} />
+                    <div className={'copywrite_container'}>
+                        © 2022. Ariana Brennan.
                     </div>
                 </div>
             </div>

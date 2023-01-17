@@ -1,37 +1,50 @@
 @import '../../common/variables';
 
 .Section.Contact {
-  background: $floral_white;
+  background: $mauve;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: $gray25;
 }
+
 .section_inner {
   justify-content: center;
-  > .body {
+
+  >.body {
     justify-content: center;
 
   }
 }
+
 .Contact {
-  color: $secondaryColor;
-    > .action_container {
+
+  >.action_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: #{$baseUnit*4}px;
+    >.copywrite_container {
+      padding-bottom: 24px;
+      padding-top: 48px;
+      color: $macchiato;
+    }
+  
+
+    >.social_container {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
+      flex-direction: row;
       gap: #{$baseUnit*4}px;
 
-      > .social_container {
-        display: flex;
-        flex-direction: row;
-        gap: #{$baseUnit*4}px;
+      img {
+        cursor: pointer;
 
-        svg {
-          cursor: pointer;
-
-          &:hover {
-            opacity: .8;
-          }
+        &:hover {
+          opacity: .8;
         }
       }
     }
+  }
+  
 }
