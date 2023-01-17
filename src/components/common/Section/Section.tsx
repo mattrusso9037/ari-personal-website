@@ -9,7 +9,7 @@ interface ISectionProps {
     locationRef?: MutableRefObject<any>;
 }
 
-export const Section: FC<ISectionProps> = ({ className, title, locationRef, children, icon}) => {
+export const Section: FC<ISectionProps> = ({ className, title, locationRef, children }) => {
     return (
         <div ref={locationRef} className={`Section ${className}`}>
             <div className={'section_inner'}>

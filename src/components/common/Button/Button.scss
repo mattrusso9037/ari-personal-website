@@ -1,15 +1,16 @@
 @import '../../../common/variables.scss';
 
 .Button {
-  color: black;
-  padding: 14px 28px;
+  color: $black75;
   font-size: 16px;
+  padding: #{$baseUnit}px;
+  width: 200px;
   cursor: pointer;
-  width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 18px;
+  border-radius: $buttonBorderRadius;
   &:focus {
     outline: none;
   }
@@ -31,9 +32,8 @@
 }
 
 .secondary {
-  border: 2px solid $primaryColor;
-  color: white;
-  background: $primaryColor;
+  border: 2px solid $caramel;
+  background: $caramel;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
   -o-transition: all .3s ease;

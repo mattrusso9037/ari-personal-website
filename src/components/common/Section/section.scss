@@ -10,15 +10,18 @@
     transition: all .5s ease-in-out;
     max-width: $max_width;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: #{$baseUnit*2}px;
     > .section_header {
-      display: grid;
-      grid-template-columns: fit-content(100%) fit-content(100%) 1fr;
-      border: $debug_border;
+      display: flex;
+      gap: #{$baseUnit*2}px;
       align-items: center;
-      grid-gap: $baseUnit*1px;
+      justify-content: center;
 
       > h2 {
         font-size: $baseUnit*4px;
+        color: $mauve;
         margin: 0;
       }
 

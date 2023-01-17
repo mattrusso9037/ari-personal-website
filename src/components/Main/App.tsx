@@ -6,7 +6,7 @@ import { useScroll } from '../../hooks/useScroll';
 import { ProjectDisplay } from '../ProjectDisplay/ProjectDisplay';
 import { mockProjects } from '../ProjectDisplay/mockProjects';
 import { Contact } from '../Contact/Contact';
-import { AboutMeCTA } from '../MyStory/AboutMeCTA';
+import { AboutMeCTA } from '../AboutMeCta/AboutMeCTA';
 import { CompanyDisplay } from '../CompanyDisplay/CompanyDisplay';
 import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBody';
 import { Modal } from '../common/Modal/Modal';
@@ -38,7 +38,7 @@ function App() {
 
     useEffect(() => {
         const navBar = document.getElementsByClassName('Navbar')[0];
-        console.log(navBar)
+
         if (showModal) {
             setTimeout(() => {
                 navBar?.classList.add('hide');
@@ -54,17 +54,13 @@ function App() {
                 <>
                     <Header onAboutClick={scrollToElement} />
                     <div className={'main_content'}>
+                        <ProjectDisplay
+                            onProjectSelected={onProjectSelected}
+                            projects={mockProjects}
+                            showModal={showModal}
+                            setShowModal={setShowModal}
+                        />
                         <AboutMeCTA aboutRef={getRef(Sections.About)} />
-                        
-                        {isAuthenticated ? <>
-                            <CompanyDisplay />
-                            <ProjectDisplay
-                                onProjectSelected={onProjectSelected}
-                                projects={mockProjects}
-                                showModal={showModal}
-                                setShowModal={setShowModal}
-                            />
-                        </> : <Login setIsAuthenticated={setIsAuthenticated} />}
                         <Contact />
 
                     </div>

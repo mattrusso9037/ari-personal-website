@@ -1,33 +1,44 @@
 @import '../../common/variables';
 
 $transformation: all .5s ease;
+
 .AboutMeCta {
   background: white;
   color: $secondaryColor;
-  > .section_inner {
+
+  >.section_inner {
     margin-top: 0;
     margin-bottom: 0;
+
     .body {
       padding-top: 0;
     }
   }
-  .MyStory {
+
+  .AboutMeCta {
     display: flex;
-    flex-direction: column;
-    font-size: 24px;
+    flex-direction: row;
+    font-size: 1.2rem;
     width: 100%;
     gap: #{$baseUnit*8}px !important;
     text-align: left;
-    > .Button {
+    img {
+      border-radius: $imageBorderRadius;
+    }
+    >.Button {
       align-self: end;
     }
 
-    > .card-container {
+    >.card-container {
       display: flex;
-      line-height: #{$baseUnit*4}px;
+      flex-direction: column;
+      line-height: #{$baseUnit*3}px;
+      gap: #{$baseUnit*3}px;
+      justify-content: center;
+      align-items: center;
     }
 
-    > .action-container {
+    >.action-container {
       gap: 16px;
       height: 48px;
       display: flex;
@@ -40,14 +51,16 @@ $transformation: all .5s ease;
   .AboutMeCta {
     padding-top: #{$baseUnit*6}px;
     padding-bottom: #{$baseUnit*6}px;
-    .MyStory {
+
+    .AboutMeCta {
       margin-top: #{$baseUnit}px;
-      > .card-container {
+
+      >.card-container {
         flex-direction: column;
         width: 100%;
       }
 
-      > .action-container {
+      >.action-container {
         display: none;
       }
     }
