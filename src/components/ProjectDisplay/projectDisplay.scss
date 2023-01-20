@@ -16,21 +16,50 @@
 }
 
 .ProjectDisplay {
-  display: block;
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  --v-offset: 60px;
+  --curve-height: 120px;
 
-  > .project_container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    width: 100%;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    background: white;
+    width: calc(100vw + 2 * var(--v-offset));
+    height: var(--curve-height);
+    position: absolute;
+    border-radius: 50%;
+    left: calc(-1 * var(--v-offset));
+    right: calc(-1 * var(--v-offset));
+  }
+
+  &:before {
+    top: calc(-0.6 * var(--curve-height));
+    // border: 1px solid blue;
+    z-index: 3;
+  }
+  &:after {
+    // border: 1px solid blue;
+    bottom: calc(-0.6 * var(--curve-height));
+    z-index: 3;
+  }
+
+  .project_container {
+      transition: all 2s ease;
+      display: flex;
+      justify-content: center;
+      grid-template-rows: 300px;
+      grid-auto-flow: column;
+      grid-gap: 24px;
+      overflow: scroll;
+      scroll-snap-type: x mandatory;
+    
+      .ProjectCard {
+        scroll-snap-align: center;
+      }
+    
   }
 }
 
-@media screen and (max-width: 600px) {
-  .ProjectDisplay {
-    > .project_container {
-      grid-template-columns: 1fr;
-    }
-  }
-}

@@ -6,6 +6,7 @@ import {ISize} from './ISize';
 import './projectDisplay.scss';
 import {Section} from "../common/Section/Section";
 import {Icon} from "../common/Icon";
+import { useRef } from 'react';
 
 const DEFAULT_THEME: ITheme = {
     primary: 'black',
@@ -37,12 +38,36 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
         setShowModal,
          onProjectSelected,
      }) => {
+        const sliderRef = useRef<HTMLDivElement>(null);
+        const SCROLL_INTERVAL = 250;
+        
+        function onScroll() {
+            if (sliderRef.current) { 
+                console.log('scrollLeft', sliderRef.current.scrollLeft)
+                sliderRef.current.scrollTo({
+                    left: sliderRef.current.scrollLeft + SCROLL_INTERVAL,
+                    behavior: 'smooth'
+                })
+            }
+        }
+
+         
+        function onScroll2() {
+            if (sliderRef.current) { 
+                sliderRef.current.scrollTo({
+                    left: sliderRef.current.scrollLeft - SCROLL_INTERVAL,
+                    behavior: 'smooth'
+                })
+            }
+        }
 
 
         return (
             <Section className={'Projects'} title={'My Projects'} icon={Icon.Implementation}>
+                <button onClick={onScroll2}>left</button>
+                <button onClick={onScroll}>right</button>
                 <div className={'ProjectDisplay'}>
-                    <div className={'project_container'}>
+                    <div ref={sliderRef} className={'project_container'}>
                         {projects.map((project, index) => {
                             return <ProjectCard key={project.title} project={project} onProjectSelected={() => onProjectSelected(index)}/>
                         })}
