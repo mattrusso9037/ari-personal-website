@@ -1,5 +1,7 @@
 @import '../../common/variables.scss';
 
+$carousel_height: 400px;
+
 .Section.Projects {
   width: 100%;
   color: $secondaryColor;
@@ -21,7 +23,9 @@
   position: relative;
   --v-offset: 60px;
   --curve-height: 120px;
-
+  ::-webkit-scrollbar {
+    height: 0px;
+  }
   >img {
     z-index: 4;
     position: absolute;
@@ -46,17 +50,16 @@
     border-radius: 50%;
     left: calc(-1 * var(--v-offset));
     right: calc(-1 * var(--v-offset));
+    z-index: 3;
   }
 
   &:before {
     top: calc(-0.6 * var(--curve-height));
-    // border: 1px solid blue;
-    z-index: 3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   &:after {
-    // border: 1px solid blue;
     bottom: calc(-0.6 * var(--curve-height));
-    z-index: 3;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
   }
 
   .project_container {
@@ -67,16 +70,14 @@
       grid-gap: 24px;
       overflow: scroll;
       scroll-snap-type: x mandatory;
-    
+      height: $carousel_height;
       .ProjectCard {
         scroll-snap-align: center;
-        min-width: 300px !important;
+        min-width: 400px;
         box-shadow: $box_shadow_light;
+        height: $carousel_height;
       }
 
   }
 }
 
-::-webkit-scrollbar-thumb {
-  background: transparent;
-}

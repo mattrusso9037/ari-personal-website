@@ -39,7 +39,7 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
          onProjectSelected,
      }) => {
         const sliderRef = useRef<HTMLDivElement>(null);
-        const SCROLL_INTERVAL = 250;
+        const SCROLL_INTERVAL = 400;
 
 
         function onSlide(direction: 'left' | 'right') {
