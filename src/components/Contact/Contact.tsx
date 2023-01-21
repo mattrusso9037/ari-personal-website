@@ -34,7 +34,7 @@ export const Contact: React.FC<IContactProps> = () => {
         <Section className={'Contact Me'} title={''} icon={Icon.Communication}>
             <div className={'Contact'}>
                 <h2>
-                    Get In Touch
+                    Get In Touch 👋
                 </h2>
                 <div className={'action_container'}>
                     <div className={'social_container'}>

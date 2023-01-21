@@ -74,8 +74,10 @@ $carousel_height: 400px;
       .ProjectCard {
         scroll-snap-align: center;
         min-width: 400px;
-        box-shadow: $box_shadow_light;
         height: $carousel_height;
+        a {
+          text-decoration: none;
+        }
       }
 
   }
