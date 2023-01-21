@@ -40,33 +40,25 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
      }) => {
         const sliderRef = useRef<HTMLDivElement>(null);
         const SCROLL_INTERVAL = 250;
-        
-        function onScroll() {
-            if (sliderRef.current) { 
-                console.log('scrollLeft', sliderRef.current.scrollLeft)
-                sliderRef.current.scrollTo({
-                    left: sliderRef.current.scrollLeft + SCROLL_INTERVAL,
-                    behavior: 'smooth'
-                })
-            }
-        }
 
-         
-        function onScroll2() {
-            if (sliderRef.current) { 
+
+        function onSlide(direction: 'left' | 'right') {
+            if (sliderRef.current) {
+                const nextLeftValue = direction === 'left' ? sliderRef.current.scrollLeft - SCROLL_INTERVAL : sliderRef.current.scrollLeft + SCROLL_INTERVAL;
+                
                 sliderRef.current.scrollTo({
-                    left: sliderRef.current.scrollLeft - SCROLL_INTERVAL,
+                    left: nextLeftValue,
                     behavior: 'smooth'
-                })
+                });
             }
         }
 
 
         return (
             <Section className={'Projects'} title={'My Projects'} icon={Icon.Implementation}>
-                <button onClick={onScroll2}>left</button>
-                <button onClick={onScroll}>right</button>
                 <div className={'ProjectDisplay'}>
+                <img onClick={() => onSlide('left')} alt="Scroll left" src="/assets/icons/chevron_left.svg" />
+                <img onClick={() => onSlide('right')} alt='Scroll right' src="/assets/icons/chevron_right.svg" />
                     <div ref={sliderRef} className={'project_container'}>
                         {projects.map((project, index) => {
                             return <ProjectCard key={project.title} project={project} onProjectSelected={() => onProjectSelected(index)}/>
