@@ -49,7 +49,6 @@
   .project_container {
       transition: all 2s ease;
       display: flex;
-      justify-content: center;
       grid-template-rows: 300px;
       grid-auto-flow: column;
       grid-gap: 24px;
@@ -58,8 +57,13 @@
     
       .ProjectCard {
         scroll-snap-align: center;
+        min-width: 300px !important;
+        box-shadow: $box_shadow_light;
       }
-    
+
   }
 }
 
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
