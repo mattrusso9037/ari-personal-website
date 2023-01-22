@@ -3,8 +3,17 @@
 .Section.About {
   color: $secondaryColor;
   > .section_inner {
+    max-width: 1450px;
+    >.section_header {
+      margin-top: $first_element_margin_top;
+      margin-bottom: 40px;
+    > h2 {
+      color: $mocha;
+      font-size: 48px;
+    }
+  }
     > .body {
-      display: flex;
+      display: flex;  
       flex-wrap: wrap;
       justify-content: space-evenly;
       font-size: $desktopBodyFontSize;
@@ -13,16 +22,25 @@
         flex-direction: row;
         padding: $baseUnit*2px 0;
         gap: $baseUnit*12px;
-        flex-wrap: wrap;
+        align-items: center;
+        // flex-wrap: wrap;
         justify-content: center;
-
+        
         .description_container {
+          color: $secondaryColor;
           display: flex;
           flex-direction: column;
           gap: $baseUnit*4px;
           text-align: left;
           flex: 2;
           min-width: 300px;
+          > h2 {
+            color: $caramel;
+            font-style: italic;
+            text-align: center;
+            font-size: 24px;
+            width: 101%;
+          }
           > div {
             line-height: 28px;
           }
@@ -58,3 +76,25 @@
     }
   }
 }
+
+
+@media screen and (max-width: 600px) {
+  .Section.About.Me {
+    width: 100%;
+    > .section_inner {
+      width: 100%;
+      // padding-top: #{$baseUsnit*4}px;
+      > .body {
+      width: 100%;
+        > div {
+          width: 100%;
+          flex-direction: column;
+          picture {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+

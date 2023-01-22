@@ -9,7 +9,8 @@ $transformation: all .5s ease;
   >.section_inner {
     margin-top: 0;
     margin-bottom: 0;
-
+    gap: 36px;
+    max-width: 900px;
     .body {
       padding-top: 0;
     }
@@ -25,10 +26,6 @@ $transformation: all .5s ease;
     img {
       border-radius: $imageBorderRadius;
     }
-    >.Button {
-      align-self: end;
-    }
-
     >.card-container {
       display: flex;
       flex-direction: column;
@@ -36,6 +33,9 @@ $transformation: all .5s ease;
       gap: #{$baseUnit*3}px;
       justify-content: center;
       align-items: center;
+      > button {
+        color: $white;
+      }
     }
 
     >.action-container {
@@ -66,5 +66,12 @@ $transformation: all .5s ease;
         display: none;
       }
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .AboutMeCta .AboutMeCta {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }

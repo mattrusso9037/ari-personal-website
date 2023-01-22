@@ -2,7 +2,7 @@ import React, {FC, useEffect} from 'react';
 import './about.scss';
 import {Section} from '../common/Section/Section';
 import {Icon} from '../common/Icon';
-import {TechnologyDisplay} from "../TechnologyDisplay/TechnologyDisplay";
+import {ExperienceDisplay} from "../ExperienceDisplay/ExperienceDisplay";
 
 export const About: FC = () => {
 
@@ -17,26 +17,19 @@ export const About: FC = () => {
         <>
             <Section className={'About Me'} title={'About Me'} icon={Icon.Person}>
                 <div>
+                <picture>
+                    <source srcSet="/assets/images/ariana_2.webp" type="image/webp" />
+                    <img src="/assets/images/ariana_2.webp" alt="Ariana Brennan Headshot" />
+                </picture>
                     <div className={'description_container'}>
-                        <div>
-                            I'm a software engineer with a strong passion for learning and problem solving. I firmly believe coding is an art form, and I take pride in things
-                            like optimization, readability, scalability, extendibility and modularity.
-                            <br/><br/>
-                            I started my career building mobile apps for the Android platform in college. When I
-                            joined the industry, I began using technologies like React, React Native and Electron to build
-                            cross-platform mobile and desktop applications using web technologies. Since then, I've been
-                            focusing on improving my skills, learning all I can about the industry, and mentoring others. I
-                            enjoy working across all stacks of development, but I prefer working on the front-end delivering
-                            meaningful experiences to end users.
-                            <br/><br/>
-                            In my free time I enjoy working on side projects, playing video games, watching movies,
-                            exploring nature, and spending time with my wife and daughter.
-                        </div>
+                        <h2>I hope to use my knowledge and skills from my background in psychology to make an impact in UX design.</h2>
+                    <div>
+                        I have a strong background in Psychology, with a Masters in Forensic Psychology from John Jay College of Criminal Justice and Bachelors in Psychology from Stony Brook University. I have worked as a crisis counselor with a nonprofit for a program funded by FEMA in response to the pandemic for almost 2 years, providing support to the community and anyone struggling with the many challenges brought on by COVID. With this program, I was in charge of media development and social media campaigns, creating visuals for upcoming events, presentations and other media. I have recently completed the Google UX Design Certificate course through Coursera and have refreshed my research design and methodology skills through usability research. I hope to use my empathy and interest in the human mind and behavior to make an impact in the UX design space. In my free time, I enjoy spending time with my family, being outside, and diving deeper into my creativity with side projects.
                     </div>
-                    {/*<img alt={'me'} src={'/assets/me.jpg'}/>*/}
+                    </div>
                 </div>
             </Section>
-            <TechnologyDisplay/>
+            <ExperienceDisplay/>
         </>
 
 )

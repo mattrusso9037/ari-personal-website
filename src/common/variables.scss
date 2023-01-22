@@ -21,6 +21,10 @@ $bodyLineHeight: 32px;
 $max_width: 850px;
 $navBarHeight: 56px;
 
+$first_element_margin_top: calc($navBarHeight + 85px);
+$margin-top-medium-1: 36px;
+$margin-top-medium-2: 48px;
+
 $mobileLeftPadding: $baseUnit*2px;
 $mobileTopPadding: $baseUnit*4px;
 
@@ -56,3 +60,7 @@ $imageBorderRadius: 48px;
 $buttonBorderRadius: 10px;
 $header1FontFamily: 'Lato, Sans Serif';
 $header1FontSize: 1.5rem;
+
+$font-size-medium-1: 2rem; // 32px
+
+$text-underline-offset-1: 4px;

@@ -1,0 +1,75 @@
+@import '../../common/variables';
+
+.ExperienceDisplay {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $baseUnit*8px 0;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+    > h2 {
+      margin: 0;
+       font-size: $font-size-medium-1;
+      color: $caramel;
+      
+    }
+    .horizontal_row {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      max-width: 1250px;
+      margin: auto;
+      margin-top: 24px;         
+      .experience_items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .subtitle {
+          font-weight: bold;
+        }
+        .ExpItem {
+          > .date {
+            font-weight: bold;
+            color: $caramel;
+          }
+          > .title.italic {
+            font-style: italic;
+          }
+        }
+      }
+      > .resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        > a {
+          margin-top: #{$baseUnit*4}px;
+          text-underline-offset: $text-underline-offset-1;
+        }
+      }
+    }
+  }
+  .certificate_badge {
+    margin-top: $margin-top-medium-2;
+    > img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+ .ExperienceDisplay {
+  .horizontal_row {
+    padding: 16px;
+    flex-direction: column;
+    gap: 48px;
+  }
+ }
+}

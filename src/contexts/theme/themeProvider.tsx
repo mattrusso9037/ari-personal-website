@@ -19,6 +19,8 @@ const ThemeProvider: React.FC = ({ children }) => {
     useEffect(() => {
         if (theme) {
             localStorage.setItem(THEME_LOCAL_STORAGE_KEY, theme);
+        } else {
+            setTheme(ThemeType.LIGHT);
         }
     }, [theme]);
 
