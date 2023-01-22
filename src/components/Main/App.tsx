@@ -61,8 +61,6 @@ function App() {
                             setShowModal={setShowModal}
                         />
                         <AboutMeCTA aboutRef={getRef(Sections.About)} />
-                        <Contact />
-
                     </div>
                 </>
             </div>

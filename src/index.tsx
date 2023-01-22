@@ -11,6 +11,7 @@ import {
 import {About} from "./components/About/About";
 import {NavBar} from "./components/Navbar/NavBar";
 import ThemeProvider from './contexts/theme/themeProvider';
+import { Contact } from './components/Contact/Contact';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -20,6 +21,7 @@ ReactDOM.render(
             <Route path='/' element={<App />} />
             <Route path='about' element={<About />} />
         </Routes>
+        <Contact />
         </ThemeProvider>
     </BrowserRouter>,
   document.getElementById('root')
