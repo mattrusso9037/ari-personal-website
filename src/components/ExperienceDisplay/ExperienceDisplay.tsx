@@ -59,7 +59,7 @@ export const ExperienceDisplay: React.FC = () => {
                         </div>
                     </div>
                     <div className='certificate_badge'>
-                        <img src="/assets/images/ariana_2.webp" alt="Ariana Brennan Headshot" />
+                        <img src="/assets/images/google-ux-design-certificate.webp" alt="Ariana Brennan Headshot" />
                     </div>
                 </div>
             </div>
