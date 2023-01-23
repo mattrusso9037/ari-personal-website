@@ -5,14 +5,15 @@
   padding-top: 0;
   padding-bottom: 0;
   color: $gray25;
-}
-
-.section_inner {
-  justify-content: center;
-
-  >.body {
+  z-index: 9;
+  > .section_inner {
     justify-content: center;
-
+    transform: translateY(0);
+  
+    >.body {
+      justify-content: center;
+  
+    }
   }
 }
 

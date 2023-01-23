@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './App.scss';
 import { Header } from '../Header/Header';
 import { Sections } from './SectionTypes';
@@ -11,30 +11,20 @@ import { CompanyDisplay } from '../CompanyDisplay/CompanyDisplay';
 import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBody';
 import { Modal } from '../common/Modal/Modal';
 import { Login } from '../Login/Login';
+import { ThemeContext } from '../../contexts/theme/themeContext';
 
 function App() {
     const { getRef, scrollToElement } = useScroll();
     const [showModal, setShowModal] = useState<boolean>(false);
     const [projectIndex, setProjectIndex] = useState<number>(0);
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+    const { appRef, onScroll } = useContext(ThemeContext);
 
     function onProjectSelected(index: number): void {
         setProjectIndex(index);
         setShowModal(true);
     }
 
-    function onScroll() {
-        const aboutMeRef = getRef(Sections.About);
-        const navBarPositionTop = aboutMeRef?.current?.getBoundingClientRect()?.top;
-        const navIsBelowAboutSection = navBarPositionTop ? navBarPositionTop - 50 < 0 : true;
-        const navBar = document.getElementsByClassName('Navbar')[0];
-
-        if (navIsBelowAboutSection) {
-            navBar.classList.add('show');
-        } else {
-            navBar.classList.remove('show');
-        }
-    }
 
     useEffect(() => {
         const navBar = document.getElementsByClassName('Navbar')[0];
@@ -49,8 +39,8 @@ function App() {
     }, [showModal]);
 
     return (
-        <div onScroll={onScroll}>
-            <div className={`App`}>
+        <div>
+            <div onScroll={onScroll} ref={appRef} className={`App`}>
                 <>
                     <Header onAboutClick={scrollToElement} />
                     <div className={'main_content'}>
@@ -61,6 +51,7 @@ function App() {
                             setShowModal={setShowModal}
                         />
                         <AboutMeCTA aboutRef={getRef(Sections.About)} />
+                        <Contact />
                     </div>
                 </>
             </div>

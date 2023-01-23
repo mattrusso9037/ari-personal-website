@@ -1,5 +1,8 @@
 @import '../../common/variables';
 
+Section.ExperienceDisplay {
+  margin-top: 16px;
+}
 .ExperienceDisplay {
   width: 100%;
   display: flex;
@@ -7,6 +10,7 @@
   justify-content: center;
   padding: $baseUnit*8px 0;
   padding-top: 12px;
+  color: $secondaryColor;
   > div {
     display: flex;
     flex-direction: column;
@@ -15,7 +19,7 @@
     
     > h2 {
       margin: 0;
-       font-size: $font-size-medium-1;
+      font-size: $font-size-medium-1;
       color: $caramel;
       
     }

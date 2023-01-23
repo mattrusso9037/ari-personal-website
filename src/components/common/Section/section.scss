@@ -7,12 +7,18 @@
   border: $debug_border;
   width: calc(100% - #{$baseUnit*8}px);
   > .section_inner {
-    transition: all .5s ease-in-out;
+    transition: all .7s ease-out;
     max-width: $max_width;
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: #{$baseUnit*2}px;
+    transform: translateY(100vh);
+    opacity: 0;
+    &.in_view {
+      transform: translateY(0);
+      opacity: 1;
+    }
     > .section_header {
       display: flex;
       gap: #{$baseUnit*2}px;
@@ -46,11 +52,13 @@
   .Section {
     padding: $baseUnit*4px $mobileLeftPadding;
     width: calc(100% - #{$mobileLeftPadding*2});
-  }
-  .Section > >.section_inner > .section_header > hr {
-    width: 100%;
-    justify-self: center;
-    margin-left: 10px;
+    > .section_inner {
+      > .section_header {
+        > h2 {
+          font-size: 1rem;
+        }
+      }
+    }
   }
 }
 

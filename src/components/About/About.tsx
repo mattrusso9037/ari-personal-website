@@ -1,11 +1,13 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC, useContext, useEffect } from 'react';
 import './about.scss';
 import { Section } from '../common/Section/Section';
 import { Icon } from '../common/Icon';
 import { ExperienceDisplay } from "../ExperienceDisplay/ExperienceDisplay";
 import { Contact } from '../Contact/Contact';
+import { ThemeContext } from '../../contexts/theme/themeContext';
 
 export const About: FC = () => {
+    const { appRef } = useContext(ThemeContext);
 
     useEffect(() => {
         setTimeout(() => {
@@ -15,7 +17,7 @@ export const About: FC = () => {
         }, 500);
     }, []);
     return (
-        <div className={`App`}>
+        <div ref={appRef} className={`App`}>
             <>
                 <Section className={'About Me'} title={'About Me'} icon={Icon.Person}>
                     <div>

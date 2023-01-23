@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Section } from '../common/Section/Section';
 import './experienceDisplay.scss';
 import {ExperienceItem} from './ExperienceItem/ExperienceItem';
 
@@ -42,6 +43,7 @@ const educationItems: IExpItem[] = [
 
 export const ExperienceDisplay: React.FC = () => {
     return (
+        <Section title={''} className={'ExperienceDisplay'}>
             <div className={'ExperienceDisplay'}>
                 <div>
                     <h2>
@@ -63,6 +65,7 @@ export const ExperienceDisplay: React.FC = () => {
                     </div>
                 </div>
             </div>
+        </Section>
     )
 };
 

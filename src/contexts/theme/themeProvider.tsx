@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { initialThemeState, ThemeContext } from "./themeContext";
 import { ThemeType } from "./themeType";
 
@@ -6,6 +6,7 @@ const THEME_LOCAL_STORAGE_KEY: string = 'abrennan-theme';
 
 const ThemeProvider: React.FC = ({ children }) => {
     const [theme, setTheme] = useState<ThemeType | null>(null);
+    const appRef = useRef<HTMLDivElement>(null);
     const { localStorage } = window;
 
     useEffect(() => {
@@ -25,7 +26,7 @@ const ThemeProvider: React.FC = ({ children }) => {
     }, [theme]);
 
     return (
-        <ThemeContext.Provider value={{ theme, setTheme }}>
+        <ThemeContext.Provider value={{ theme, setTheme, appRef }}>
             <div className={`theme--${theme}`}>
                 {children}
             </div>
