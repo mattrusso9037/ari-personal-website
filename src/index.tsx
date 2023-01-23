@@ -21,7 +21,6 @@ ReactDOM.render(
             <Route path='/' element={<App />} />
             <Route path='about' element={<About />} />
         </Routes>
-        <Contact />
         </ThemeProvider>
     </BrowserRouter>,
   document.getElementById('root')

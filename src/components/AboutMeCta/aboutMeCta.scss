@@ -11,6 +11,7 @@ $transformation: all .5s ease;
     margin-bottom: 0;
     gap: 36px;
     max-width: 900px;
+
     .body {
       padding-top: 0;
     }
@@ -21,11 +22,16 @@ $transformation: all .5s ease;
     flex-direction: row;
     font-size: 1.2rem;
     width: 100%;
-    gap: #{$baseUnit*8}px !important;
+    gap: #{$baseUnit*8}px;
     text-align: left;
+    > div > h3 {
+      display: none;
+    };
+
     img {
       border-radius: $imageBorderRadius;
     }
+
     >.card-container {
       display: flex;
       flex-direction: column;
@@ -33,7 +39,8 @@ $transformation: all .5s ease;
       gap: #{$baseUnit*3}px;
       justify-content: center;
       align-items: center;
-      > button {
+
+      >button {
         color: $white;
       }
     }
@@ -70,8 +77,40 @@ $transformation: all .5s ease;
 }
 
 @media screen and (max-width: 600px) {
-  .AboutMeCta .AboutMeCta {
-    padding-top: 0;
-    padding-bottom: 0;
+  .AboutMeCta {
+    // width: calc(100% - 32px);
+    padding: 48px 24px;
+    > .section_inner {
+      > .section_header {
+        display: none;
+      }
+      .AboutMeCta {
+        padding-top: 0;
+        padding-bottom: 0;
+        gap: 16px;
+        > div {
+          display: flex;
+          // justify-content: space-between;
+          width: 100%;
+          align-items: center;
+          > picture {
+            justify-self: start;
+            >img {
+              width: 125px;
+              border-radius: 25px;
+            }
+          }
+          > h3 {
+            display: block;
+            margin-left: 16px;
+            font-size: 1rem;
+            color: $mauve;
+            text-align: center;
+            width: 138px;
+          }
+        }
+      }
+    }
+    
   }
 }

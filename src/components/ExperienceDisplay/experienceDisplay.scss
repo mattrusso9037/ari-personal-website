@@ -32,8 +32,13 @@
         gap: 16px;
         .subtitle {
           font-weight: bold;
+          display: flex;
+          align-items: flex-start;
         }
         .ExpItem {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
           > .date {
             font-weight: bold;
             color: $caramel;
@@ -67,10 +72,27 @@
 
 @media screen and (max-width: 600px) {
  .ExperienceDisplay {
+  padding-bottom: 0;
+  > div > h2 {
+      font-size: 1.2rem;
+    
+  }
   .horizontal_row {
     padding: 16px;
     flex-direction: column;
     gap: 48px;
+    .experience_items {
+      font-size: .8rem;
+    }
   }
- }
+  .certificate_badge {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    > img {
+      width: 180px;
+      height: 180px;
+    }
+  } 
+}
+ 
 }

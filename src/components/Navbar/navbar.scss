@@ -9,7 +9,7 @@ $transition: all .3s ease-in;
       background: getThemedValue('navbarBackgroundColor');
     }
     color: $white;
-    position: fixed;
+    position: relative;
     height: $navBarHeight;
     display: flex;
     z-index: 3;
@@ -22,8 +22,12 @@ $transition: all .3s ease-in;
       display: flex;
       gap: #{$baseUnit}px;
       align-items: center;
+      > svg {
+        fill: $macchiato;
+        display: none;
+      }
       > img {
-        height: 47px;
+        height: 40px;
       }
       >.tagline {
         display: flex;
@@ -31,12 +35,10 @@ $transition: all .3s ease-in;
       }
     }
     >.link_container {
-      height: 100%;
       display: inherit;
       align-items: center;
       gap: #{$baseUnit*2}px;
-      
-
+      height: 100%;
       >li {
         list-style-type: none;
         padding: 10px;
@@ -97,4 +99,39 @@ $transition: all .3s ease-in;
     }
   }
 
+}
+
+
+@media screen and (max-width: 600px) {
+  .Navbar {
+    .navbar_wrapper {
+      > div {
+        > svg {
+          display: block;
+        }
+        > .tagline {
+          display: none;
+        }
+      }
+      > .link_container {
+        height: auto;
+        top: $navBarHeight;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        z-index: -1;
+        color: white;
+        background: $mauve;
+        transition: transform .7s ease-in-out;
+        padding-bottom: 8px;
+        &.show {
+          transform: translateY(0);
+        }
+        &.hide {
+          transform: translateY(-100vh);
+        }
+      }
+    }
+  }
 }

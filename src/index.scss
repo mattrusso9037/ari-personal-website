@@ -21,6 +21,13 @@ html, body, #root, .App, .main_content {
   height: 100vh;
   background: white;
 }
+#root {
+  overflow: hidden;
+}
+
+.App {
+  height: calc(100vh - #{$navBarHeight});
+}
 
 ::-webkit-scrollbar {
   width: 5px;

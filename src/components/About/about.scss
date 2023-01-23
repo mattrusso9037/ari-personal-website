@@ -10,7 +10,6 @@
       margin-bottom: 40px;
     > h2 {
       color: $mocha;
-      font-size: 48px;
     }
   }
     > .body {
@@ -26,6 +25,9 @@
         align-items: center;
         // flex-wrap: wrap;
         justify-content: center;
+        > .tagline_container > h2 {
+          display: none;
+        }
         
         .description_container {
           color: $secondaryColor;
@@ -81,21 +83,51 @@
 
 @media screen and (max-width: 600px) {
   .Section.About.Me {
-    width: 100%;
+   
+    // width: 100%;
     > .section_inner {
+      > .section_header {
+        margin-top: 0;
+        margin-bottom: 0;
+        > h2 {
+          font-size: 1.2rem;
+        }
+      }
       width: 100%;
       // padding-top: #{$baseUsnit*4}px;
       > .body {
+        padding-top: 0;
       width: 100%;
         > div {
           width: 100%;
           flex-direction: column;
+          gap: 24px;
+          > .tagline_container {
+            > h2 {
+              font-size: 1rem;
+              color: $caramel;
+              font-style: italic;
+              text-align: center;
+              width: 101%;
+            }
           picture {
             width: 100%;
+            > img {
+              width: 200px;
+              margin-top: 24px;
+            }
           }
+        }
+        > .description_container {
+          > h2 {
+            display: none;
+          }
+          > div {
+            font-size: 1rem;
+          }
+        }
         }
       }
     }
   }
 }
-
