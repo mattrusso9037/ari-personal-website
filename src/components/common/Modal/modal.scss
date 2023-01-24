@@ -8,7 +8,8 @@ $initialModalPosition: 100%;
   top: 0;
 
   .card {
-    transform: translateY(125%);
+    min-height: 100%;
+    transform: translateY(100vh);
     overflow: scroll;
     background: $floral_white;
     z-index: 3;
@@ -30,6 +31,7 @@ $initialModalPosition: 100%;
       color: black;
       height: 100%;
       width: 100%;
+      min-height: 100vh;
     }
 
     > .action-container {

@@ -1,7 +1,7 @@
 import React, { FC, useContext } from 'react';
 import './header.scss';
 import { ScrollTo } from '../../hooks/useScroll';
-import { Sections } from '../Main/SectionTypes';
+import { Sections } from '../App/SectionTypes';
 import { ThemeContext } from '../../contexts/theme/themeContext';
 import { ThemeType } from '../../contexts/theme/themeType';
 

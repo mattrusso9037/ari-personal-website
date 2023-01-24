@@ -4,6 +4,10 @@
 $transition: all .3s ease-in;
 
 .Navbar {
+  transition: $transition;
+  &.hide {
+    transform: translateY(-#{$navBarHeight});
+  }
   >.navbar_wrapper {
     @include themed() {
       background: getThemedValue('navbarBackgroundColor');

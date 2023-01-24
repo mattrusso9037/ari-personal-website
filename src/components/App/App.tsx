@@ -12,35 +12,28 @@ import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBod
 import { Modal } from '../common/Modal/Modal';
 import { Login } from '../Login/Login';
 import { ThemeContext } from '../../contexts/theme/themeContext';
+import { AppContext } from '../../contexts/app/appContext';
 
 function App() {
     const { getRef, scrollToElement } = useScroll();
     const [showModal, setShowModal] = useState<boolean>(false);
     const [projectIndex, setProjectIndex] = useState<number>(0);
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-    const { appRef, onScroll } = useContext(ThemeContext);
+    const { appRef } = useContext(ThemeContext);
+    const { setShowNav } = useContext(AppContext);
 
     function onProjectSelected(index: number): void {
         setProjectIndex(index);
         setShowModal(true);
     }
 
-
     useEffect(() => {
-        const navBar = document.getElementsByClassName('Navbar')[0];
-
-        if (showModal) {
-            setTimeout(() => {
-                navBar?.classList.add('hide');
-            }, 700);
-        } else {
-            navBar?.classList.remove('hide');
-        }
+        setShowNav(!showModal);
     }, [showModal]);
 
     return (
         <div>
-            <div onScroll={onScroll} ref={appRef} className={`App`}>
+            <div ref={appRef} className={`App`}>
                 <>
                     <Header onAboutClick={scrollToElement} />
                     <div className={'main_content'}>

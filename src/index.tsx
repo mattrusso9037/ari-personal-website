@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import App from './components/Main/App';
+import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 import {
     BrowserRouter,
@@ -12,17 +12,10 @@ import {About} from "./components/About/About";
 import {NavBar} from "./components/Navbar/NavBar";
 import ThemeProvider from './contexts/theme/themeProvider';
 import { Contact } from './components/Contact/Contact';
+import { Main } from './main';
 
 ReactDOM.render(
-    <BrowserRouter>
-    <ThemeProvider>
-        <NavBar />
-        <Routes>
-            <Route path='/' element={<App />} />
-            <Route path='about' element={<About />} />
-        </Routes>
-        </ThemeProvider>
-    </BrowserRouter>,
+    <Main />,
   document.getElementById('root')
 );
 

@@ -1,5 +1,5 @@
 import {MutableRefObject, useRef} from 'react';
-import {Sections} from '../components/Main/SectionTypes';
+import {Sections} from '../components/App/SectionTypes';
 
 interface IUseScroll {
     scrollToElement: ScrollTo;
