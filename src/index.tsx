@@ -11,7 +11,7 @@ import {
 import {About} from "./components/About/About";
 import {NavBar} from "./components/Navbar/NavBar";
 import ThemeProvider from './contexts/theme/themeProvider';
-import { Contact } from './components/Contact/Contact';
+import { Footer } from './components/Footer/Footer';
 import { Main } from './main';
 
 ReactDOM.render(

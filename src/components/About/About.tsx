@@ -3,7 +3,7 @@ import './about.scss';
 import { Section } from '../common/Section/Section';
 import { Icon } from '../common/Icon';
 import { ExperienceDisplay } from "../ExperienceDisplay/ExperienceDisplay";
-import { Contact } from '../Contact/Contact';
+import { Footer } from '../Footer/Footer';
 import { ThemeContext } from '../../contexts/theme/themeContext';
 
 export const About: FC = () => {
@@ -37,7 +37,7 @@ export const About: FC = () => {
                     </div>
                 </Section>
                 <ExperienceDisplay />
-                <Contact />
+                <Footer />
             </>
         </div>
     )

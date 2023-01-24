@@ -1,16 +1,7 @@
 import * as React from 'react';
 import { Section } from '../common/Section/Section';
 import { Icon } from '../common/Icon';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '../common/Button/Button';
-import './contact.scss';
-
-interface IContactProps {
-}
+import './footer.scss';
 
 const ICON_SIZE = '4x';
 
@@ -21,7 +12,7 @@ enum Link {
     Email = 'abrennan418@gmail.com',
 }
 
-export const Contact: React.FC<IContactProps> = () => {
+export const Footer: React.FC = () => {
     function openLink(url: Link): void {
         if (url === Link.Email) {
             window.location.href = `mailto:${url}`;
@@ -31,8 +22,8 @@ export const Contact: React.FC<IContactProps> = () => {
     }
 
     return (
-        <Section className={'Contact Me'} title={''} icon={Icon.Communication}>
-            <div className={'Contact'}>
+        <Section className={'Footer'} title={''} icon={Icon.Communication}>
+            <div className={'Footer'}>
                 <h2>
                     Get In Touch 👋
                 </h2>

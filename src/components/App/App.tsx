@@ -5,7 +5,7 @@ import { Sections } from './SectionTypes';
 import { useScroll } from '../../hooks/useScroll';
 import { ProjectDisplay } from '../ProjectDisplay/ProjectDisplay';
 import { mockProjects } from '../ProjectDisplay/mockProjects';
-import { Contact } from '../Contact/Contact';
+import { Footer } from '../Footer/Footer';
 import { AboutMeCTA } from '../AboutMeCta/AboutMeCTA';
 import { CompanyDisplay } from '../CompanyDisplay/CompanyDisplay';
 import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBody';
@@ -44,7 +44,7 @@ function App() {
                             setShowModal={setShowModal}
                         />
                         <AboutMeCTA aboutRef={getRef(Sections.About)} />
-                        <Contact />
+                        <Footer />
                     </div>
                 </>
             </div>
