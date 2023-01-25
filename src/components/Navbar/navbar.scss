@@ -21,7 +21,6 @@ $transition: all .3s ease-in;
     align-items: center;
     width: calc(100% - #{$baseUnit*2}px);
     padding: 0 #{$baseUnit}px;
-    transition: $transition;
     > div {
       display: flex;
       gap: #{$baseUnit}px;
@@ -127,13 +126,13 @@ $transition: all .3s ease-in;
         z-index: -1;
         color: white;
         background: $mauve;
-        transition: transform .7s ease-in-out;
+        transition: transform .7s ease-out;
         padding-bottom: 8px;
         &.show {
           transform: translateY(0);
         }
         &.hide {
-          transform: translateY(-100vh);
+          transform: translateY(-375px);
         }
       }
     }

@@ -3,6 +3,7 @@
 Section.ExperienceDisplay {
   margin-top: 16px;
 }
+
 .ExperienceDisplay {
   width: 100%;
   display: flex;
@@ -11,62 +12,73 @@ Section.ExperienceDisplay {
   padding: $baseUnit*8px 0;
   padding-top: 12px;
   color: $secondaryColor;
-  > div {
+
+  >div {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
-    > h2 {
+
+    >h2 {
       margin: 0;
       font-size: $font-size-medium-1;
       color: $caramel;
-      
+
     }
+
     .horizontal_row {
       display: flex;
       justify-content: space-evenly;
       width: 100%;
       max-width: 1250px;
       margin: auto;
-      margin-top: 24px;         
+      margin-top: 24px;
+
       .experience_items {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
         .subtitle {
           font-weight: bold;
           display: flex;
           align-items: flex-start;
         }
+
         .ExpItem {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          > .date {
+
+          >.date {
             font-weight: bold;
             color: $caramel;
           }
-          > .title.italic {
+
+          >.title.italic {
             font-style: italic;
           }
         }
       }
-      > .resume {
+
+      >.resume {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        > a {
+
+        >a {
           margin-top: #{$baseUnit*4}px;
           text-underline-offset: $text-underline-offset-1;
         }
       }
     }
   }
+
   .certificate_badge {
     margin-top: $margin-top-medium-2;
-    > img {
+
+    >img {
       width: 180px;
       height: 180px;
     }
@@ -75,28 +87,50 @@ Section.ExperienceDisplay {
 }
 
 @media screen and (max-width: 600px) {
- .ExperienceDisplay {
-  padding-bottom: 0;
-  > div > h2 {
-      font-size: 1.2rem;
-    
-  }
-  .horizontal_row {
-    padding: 16px;
-    flex-direction: column;
-    gap: 48px;
-    .experience_items {
-      font-size: .8rem;
+  .Section.ExperienceDisplay {
+    > .section_inner {
+      > .body {
+        width: calc(100% - 32px);
+        padding: 0 $spacing-small-2;
+      }
     }
   }
-  .certificate_badge {
-    margin-top: 16px;
-    margin-bottom: 24px;
-    > img {
-      width: 180px;
-      height: 180px;
+  .ExperienceDisplay {
+    padding-bottom: 0;
+    padding-top: 0;
+
+    >.section_inner {
+      padding-top: 0;
     }
-  } 
-}
- 
+
+    >div {
+      >h2 {
+        font-size: 1.2rem;
+
+      }
+
+      .horizontal_row {
+        margin-top: 0px;
+        // padding: 16px;
+        flex-direction: column;
+        gap: 48px;
+
+        .experience_items {
+          font-size: .8rem;
+        }
+      }
+
+      .certificate_badge {
+        margin-top: 16px;
+        margin-bottom: 24px;
+
+        >img {
+          width: 180px;
+          height: 180px;
+        }
+      }
+    }
+
+  }
+
 }

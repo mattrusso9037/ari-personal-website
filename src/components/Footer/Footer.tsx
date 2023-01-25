@@ -2,24 +2,12 @@ import * as React from 'react';
 import { Section } from '../common/Section/Section';
 import { Icon } from '../common/Icon';
 import './footer.scss';
+import { Link, useOpenLink } from '../../hooks/useOpenLink';
 
 const ICON_SIZE = '4x';
 
-enum Link {
-    Dribble = 'https://dribbble.com/ari_b2183',
-    Behance = 'https://www.behance.net/arianabrennan',
-    Linkedin = 'https://www.linkedin.com/in/abrennan6115120/',
-    Email = 'abrennan418@gmail.com',
-}
-
 export const Footer: React.FC = () => {
-    function openLink(url: Link): void {
-        if (url === Link.Email) {
-            window.location.href = `mailto:${url}`;
-        } else {
-            window.open(url, 'blank');
-        }
-    }
+    const { openLink } = useOpenLink();
 
     return (
         <Section className={'Footer'} title={''} icon={Icon.Communication}>

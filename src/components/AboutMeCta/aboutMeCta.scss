@@ -78,9 +78,9 @@ $transformation: all .5s ease;
 
 @media screen and (max-width: 600px) {
   .AboutMeCta {
-    // width: calc(100% - 32px);
     padding: 48px 24px;
     > .section_inner {
+      padding-top: 0;
       > .section_header {
         display: none;
       }
@@ -90,7 +90,7 @@ $transformation: all .5s ease;
         gap: 16px;
         > div {
           display: flex;
-          // justify-content: space-between;
+          font-size: $mobileBodyFontSize;
           width: 100%;
           align-items: center;
           > picture {

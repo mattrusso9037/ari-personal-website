@@ -39,9 +39,9 @@ export const NavBar: React.FC = () => {
                     {/* <li onClick={onMenuClick} className={`${getClass('/projects')}`}>
                         <Link to="#">Projects</Link>
                     </li> */}
-                    {/* <li onClick={onMenuClick} className={`${getClass('/contact')}`}>
-                        <Link to="#">Contact</Link>
-                    </li> */}
+                    <li onClick={onMenuClick} className={`${getClass('/contact')}`}>
+                        <Link to="/Contact">Contact</Link>
+                    </li>
                 </div>
             </div>
         </div>

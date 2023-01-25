@@ -29,6 +29,12 @@ $mobileLeftPadding: $baseUnit*2px;
 $mobileTopPadding: $baseUnit*4px;
 
 $desktopBodyFontSize: 20px;
+$mobileBodyFontSize: 1rem;
+
+$spacing-small-2: 16px;
+
+$footerHeight: 250px;
+
 
 :export {
   $bg_color: $bgColor;
