@@ -9,18 +9,21 @@
         justify-content: center;
         .thank_you {
             font-size: 2rem;
-            color: $caramel;
+            color: $caramel;      
         }
         .social_container {
             margin-top: 16px;
-            gap: 54px;
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            >div {
+                font-size: 60px;
+            }
            
             > ul {
                 list-style-type: none;
+                padding-inline-start: 0;
                 > li {
                     font-size: 2rem;
                     display: flex;
@@ -51,11 +54,19 @@
       > .section_inner {
         padding-top: 0;
         .thank_you {
-           font-size: 1.1rem; 
+           font-size: 1rem; 
         }
         .social_container {
             font-size: 1.2rem; 
-            gap: 24px;
+            >div {
+                font-size: 40px;
+            }
+            > ul {
+                margin-block-start: 0;
+                > li {
+                    font-size: 1.1rem;
+                }
+            }
         }
       }
     }

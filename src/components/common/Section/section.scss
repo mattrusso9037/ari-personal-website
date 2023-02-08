@@ -48,7 +48,7 @@
 
 @media screen and (max-width: 600px) {
   .Section {
-    padding: $baseUnit*4px $mobileLeftPadding;
+    padding: $baseUnit*4px $spacing-medium-1;
     width: calc(100% - #{$mobileLeftPadding*2});
     > .section_inner {
       > .section_header {

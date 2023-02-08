@@ -21,6 +21,7 @@ $transition: all .3s ease-in;
     align-items: center;
     width: calc(100% - #{$baseUnit*2}px);
     padding: 0 #{$baseUnit}px;
+    
     > div {
       display: flex;
       gap: #{$baseUnit}px;
@@ -28,6 +29,10 @@ $transition: all .3s ease-in;
       > svg {
         fill: $macchiato;
         display: none;
+        transition: transform .5s ease-out;
+        &.close_icon {
+          transform: rotate(180deg);
+        }
       }
       > img {
         height: 40px;

@@ -88,10 +88,12 @@ Section.ExperienceDisplay {
 
 @media screen and (max-width: 600px) {
   .Section.ExperienceDisplay {
+    padding: 0 $spacing-medium-1;
+    width: calc(100% - #{$spacing-medium-1*2});
     > .section_inner {
       > .body {
-        width: calc(100% - 32px);
-        padding: 0 $spacing-small-2;
+        width: 100%;
+        padding-top: 0;
       }
     }
   }
@@ -104,19 +106,22 @@ Section.ExperienceDisplay {
     }
 
     >div {
+      gap: 16px;
       >h2 {
         font-size: 1.2rem;
-
       }
-
       .horizontal_row {
         margin-top: 0px;
-        // padding: 16px;
         flex-direction: column;
         gap: 48px;
 
         .experience_items {
           font-size: .8rem;
+        }
+        .resume {
+          iframe {
+            width: 100%;
+          }
         }
       }
 
