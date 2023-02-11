@@ -4,7 +4,7 @@ import { Header } from '../Header/Header';
 import { Sections } from './SectionTypes';
 import { useScroll } from '../../hooks/useScroll';
 import { ProjectDisplay } from '../ProjectDisplay/ProjectDisplay';
-import { mockProjects } from '../ProjectDisplay/mockProjects';
+import { projects } from '../ProjectDisplay/projectConfiguration';
 import { Footer } from '../Footer/Footer';
 import { AboutMeCTA } from '../AboutMeCta/AboutMeCTA';
 import { CompanyDisplay } from '../CompanyDisplay/CompanyDisplay';
@@ -39,7 +39,7 @@ function App() {
                     <div className={'main_content'}>
                         <ProjectDisplay
                             onProjectSelected={onProjectSelected}
-                            projects={mockProjects}
+                            projects={projects}
                             showModal={showModal}
                             setShowModal={setShowModal}
                         />
@@ -49,7 +49,7 @@ function App() {
                 </>
             </div>
             <Modal show={showModal} onClose={() => setShowModal(false)}>
-                <ProjectModalBody project={mockProjects[projectIndex]} />
+                <ProjectModalBody project={projects[projectIndex]} />
             </Modal>
         </div>
     );

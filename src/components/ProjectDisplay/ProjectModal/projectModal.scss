@@ -12,7 +12,6 @@ $transformation: all 2s ease;
   justify-content: center;
    .content {
     max-width: $max_width;
-    text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,6 +20,37 @@ $transformation: all 2s ease;
     padding: 24px;
     padding-bottom: 0;
     text-align: start;
+    > .heading_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      > h2 {
+        margin: 0;
+        font-size: $font-size-medium-1;
+        color: $mauve;
+        &:last-of-type {
+          font-style: italic;
+          font-weight: 400;
+        }
+        
+      }
+      > .technologies {
+      
+        > div {
+          display: flex;
+          gap: $spacing-medium-1;
+          > span {
+            background: $caramel;
+            border-radius: $buttonBorderRadius;
+            color: $white;
+            padding: $padding-small-1;
+          }
+        }
+        display: flex;
+        flex-direction: column;
+        margin-top: #{$baseUnit*2}px;
+      }
+    }
     > .description {
       text-transform: none;
       line-height: $bodyLineHeight;
@@ -28,21 +58,7 @@ $transformation: all 2s ease;
     > img {
       width: 600px;
     }
-    > .technologies {
-      > strong {
-        align-self: center;
-      }
-      > div {
-        margin-top: #{$baseUnit*2}px;
-        > span {
-          font-size: 12px;
-          color: $gray75;
-        }
-      }
-      display: flex;
-      flex-direction: column;
-      margin-top: #{$baseUnit*2}px;
-    }
+    
     > .img-container {
       background-position: center;
       background-size: cover;

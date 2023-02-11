@@ -4,6 +4,7 @@ import {IProject} from "../IProject";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faExternalLink} from "@fortawesome/free-solid-svg-icons";
 import {faGithubSquare} from '@fortawesome/free-brands-svg-icons';
+import { Section } from './Section';
 
 interface IProjectModalBodyProps {
     project: IProject;
@@ -18,22 +19,25 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
         <div className={`ProjectModalBody ${project.title.replaceAll(' ', '')}`}>
             <div>
                 <div className={'content'}>
-                    <h2>{project.title}</h2>
-                    <div className={'description'}>
-                        {project.fullDescription}
-                    </div>
-                    <div className={'technologies'}>
-                        <strong>Technologies</strong>
-                        <div>
-                            {project.technologiesUsed.map((item, index) => {
-                                return (
-                                    <span> {item} {index < project.technologiesUsed.length - 1 ? '| ' : ''}</span>
-                                )
-                            })}
+                    <div className='heading_container'>
+                        <h2>{project.title}</h2>
+                        <h2 className={'description'}>
+                            {project.description}
+                        </h2>
+                        <div className={'technologies'}>
+                            <div>
+                                {project.technologiesUsed.map((item, index) => {
+                                    return (
+                                        <span className='item'>{item}</span>
+                                    )
+                                })}
+                            </div>
                         </div>
-                    </div>
-                    <img alt={'zebra'} src={`assets/projects/${project.featuredImageUri}`} />
-                    {project.view}
+                        </div>
+                    <img src={`assets/projects/${project.featuredImageUri}`} />
+                    
+                    {project.sections.map((section) => <Section title={section.title} content={section.content} images={section.images} />)}
+
                     <div className={'action-container'}>
                         {project.sourceControlUrl && (
                             <FontAwesomeIcon

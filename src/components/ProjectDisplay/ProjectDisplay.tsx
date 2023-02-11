@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ITheme } from './ITheme';
-import { ProjectCard } from './ProjectCard/ProjectCard';
+import { ProjectCard } from './ProjectTile/ProjectCard';
 import { IProject } from './IProject';
 import { ISize } from './ISize';
 import './projectDisplay.scss';
