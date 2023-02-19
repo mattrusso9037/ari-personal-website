@@ -46,7 +46,7 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
-                images: []
+                images: ['inventracker/id_1_4x.png', 'inventracker/id_2_4x.png','inventracker/id_3_4x.png','inventracker/id_4_4x.png']
             },
             {
                 title: SectionTitle.RESEARCH_METHODOLOGY,
@@ -69,7 +69,7 @@ export const projects: IProject[] = [
             }
         ],
         // image on top
-        featuredImageUri: 'inventracker_tile.png',
+        featuredImageUri: 'inventracker/featured_1_4x.png',
         // tile
         thumbnailImageUri: 'inventracker_tile.png',
     },

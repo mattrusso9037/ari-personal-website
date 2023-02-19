@@ -5,13 +5,14 @@ interface IProps {
     title?: string;
     content?: string | JSX.Element;
     images?: string[];
+    openLink: (url: string) => void;
 }
-export const Section: React.FC<IProps> = ({title, content, images}) => {
+export const Section: React.FC<IProps> = ({title, content, images, openLink}) => {
     return (
-        <div className='ProjectSection'>
+        <div className={`ProjectSection ${title?.replaceAll(' ', '')}`}>
             <h4>{title}</h4>
             <div>{content}</div>
-            {images && <div className='img-container'>{images.map((img) => <img width={'100%'} src={`assets/projects/${img}`} />)}</div>}
+            {images && <div  className='img-container'>{images.map((img) => <img onClick={() => openLink(`${window.location.href}assets/projects/${img}`)} width={'100%'} src={`assets/projects/${img}`} />)}</div>}
         </div>
     );
  }

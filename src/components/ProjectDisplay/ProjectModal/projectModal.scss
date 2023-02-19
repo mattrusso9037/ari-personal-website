@@ -10,64 +10,85 @@ $transformation: all 2s ease;
   -o-transition: $transformation;
   transition: $transformation;
   justify-content: center;
-   .content {
+
+  img {
+    cursor: pointer;
+  }
+
+
+
+  .content {
     max-width: $max_width;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     gap: #{$baseUnit*4}px;
-    padding: 24px;
+    padding: 24px; 
     padding-bottom: 0;
     text-align: start;
-    > .heading_container {
+    > .featured-img {
+      max-height: 500px;
+      width: fit-content;
+    }
+
+    >.heading_container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      > h2 {
+
+      >h2 {
         margin: 0;
         font-size: $font-size-medium-1;
         color: $mauve;
+
         &:last-of-type {
           font-style: italic;
           font-weight: 400;
         }
-        
+
       }
-      > .technologies {
-      
-        > div {
+
+      >.technologies {
+
+        >div {
           display: flex;
           gap: $spacing-medium-1;
-          > span {
+
+          >span {
             background: $caramel;
             border-radius: $buttonBorderRadius;
             color: $white;
             padding: $padding-small-1;
           }
         }
+
         display: flex;
         flex-direction: column;
         margin-top: #{$baseUnit*2}px;
       }
     }
-    > .description {
+
+    >.description {
       text-transform: none;
       line-height: $bodyLineHeight;
     }
-    > img {
+
+    >img {
       width: 600px;
     }
-    
-    > .img-container {
+
+    >.img-container {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      > img {
+
+      >img {
         width: 100%;
       }
     }
-    > .action-container {
+
+    >.action-container {
       height: 10%;
       width: 100%;
       display: flex;
@@ -76,8 +97,9 @@ $transformation: all 2s ease;
       gap: #{$baseUnit}px;
       align-items: center;
       padding-bottom: #{$baseUnit*4}px;
-      padding-right:  #{$baseUnit*4}px;
-      > svg:hover {
+      padding-right: #{$baseUnit*4}px;
+
+      >svg:hover {
         cursor: pointer;
         opacity: .8;
       }
@@ -90,7 +112,8 @@ $transformation: all 2s ease;
     .content {
       width: calc(100% - #{$baseUnit*2}px);
       padding: #{$baseUnit}px;
-      > img {
+
+      >img {
         width: 300px;
       }
     }
