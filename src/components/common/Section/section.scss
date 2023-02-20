@@ -6,7 +6,7 @@
   border: $debug_border;
   width: calc(100% - #{$baseUnit*8}px);
   > .section_inner {
-    transition: all .7s ease-out;
+    transition: all .5s ease-out;
     margin: auto;
     display: flex;
     flex-direction: column;

@@ -18,7 +18,7 @@ $box_shadow_1: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 $box_shadow_light: 2px 3px 5px -1px #999999;
 $bodyLineHeight: 32px;
 
-$max_width: 850px;
+$max_width: 1250px;
 $navBarHeight: 56px;
 
 $first_element_margin_top: calc($navBarHeight + 85px);
@@ -71,7 +71,11 @@ $imageBorderRadius: 48px;
 $buttonBorderRadius: 10px;
 $header1FontFamily: 'Lato, Sans Serif';
 $header1FontSize: 1.5rem;
+$font-size-small-1: 1rem;
 
+$font-size-small-2: 1.2rem;
 $font-size-medium-1: 2rem; // 32px
 
 $text-underline-offset-1: 4px;
+
+$max-content-width: 1200px;

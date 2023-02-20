@@ -11,6 +11,8 @@ interface ISectionProps {
     locationRef?: MutableRefObject<any>;
 }
 
+const THROTTLE_TIME: number = 100;
+
 export const Section: FC<ISectionProps> = ({ className, title, locationRef, children }) => {
     const { appRef } = useContext(ThemeContext);
     const [inView, setInView] = useState<boolean>(false);
@@ -22,11 +24,11 @@ export const Section: FC<ISectionProps> = ({ className, title, locationRef, chil
                 toggleViewStateTrue();
             }
 
-            appRef.current.addEventListener('scroll', _.throttle(onScroll, 300));
+            appRef.current.addEventListener('scroll', _.throttle(onScroll, THROTTLE_TIME));
         }
 
         return () => {
-            appRef?.current?.removeEventListener('scroll', _.throttle(onScroll, 300))
+            appRef?.current?.removeEventListener('scroll', _.throttle(onScroll, THROTTLE_TIME))
         }
     }, []);
 

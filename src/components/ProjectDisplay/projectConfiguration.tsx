@@ -46,7 +46,7 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
-                images: ['inventracker/id_1_4x.png', 'inventracker/id_2_4x.png','inventracker/id_3_4x.png','inventracker/id_4_4x.png']
+                images: ['inventracker/id_1_4x.png', 'inventracker/id_2_4x_grouped.png']
             },
             {
                 title: SectionTitle.RESEARCH_METHODOLOGY,
@@ -116,7 +116,7 @@ export const projects: IProject[] = [
                     <div>You can visit Listen to the Angels' website here!</div>
                     <a target='blank' href='https://listentotheangels.org'>listentotheangels.org</a>
                 </div>,
-
+                images: ['ltta/featured_3_4x.png', 'ltta/featured_4_4x.png']
             },
 
         ],
@@ -145,7 +145,7 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.CHALLENGES_AND_CONSTRAINTS,
-                content: 'TBD'
+                content: 'There weren\'t many challenges with this project, although I did find it challenging to redesign the category cards with the progress bar. I felt that the original design was helpful but also wanted to utilize the card space in the most efficient way to create a quick overview of a category\'s status without overwhelming the user (and the available space) with too much information. Above you will see different versions of the card I considered.'
             },
             {
                 title: SectionTitle.RESEARCH_FINDINGS,
@@ -153,14 +153,14 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.CONCLUSION,
-                content: 'TBD',
+                content: 'Throughout the redesign process, I learned how to take an existing application and improve its design and user experience. I was able to make the components more simple and easy to read, and the application overall easier to navigate. I would like to continue to improve the application experience by developing insights from user feedback and iterating on the design.',
             },
             {
-                images: ['simplibudget/ns_1.png', 'simplibudget/ns_2.png', 'simplibudget/ns_3.png', 'simplibudget/ns_4.png']
+                images: ['simplibudget/ns_grouped_1_4x.png', ]
             },
             {
                 title: 'Original Designs',
-                images: ['simplibudget/og_1.png', 'simplibudget/og_2.png', 'simplibudget/og_3.png', 'simplibudget/og_4.png']
+                images: ['simplibudget/ns_grouped_2_4x.png']
             }
         ],
     },
@@ -190,6 +190,10 @@ export const projects: IProject[] = [
                 content: 'The target users of the website are movie theater customers who want to order snacks from their seats. These customers may range in age and technical proficiency, but they all share the desire for a quick and convenient way to order snacks.'
             },
             {
+                title: SectionTitle.CHALLENGES_AND_CONSTRAINTS,
+                content: 'The challenges faced with this project included being unfamiliar with Adobe xD and designing my first responsive web application using the progressive enhancement approach. I was able to learn and adjust to the differences between this tool and Figma throughout this project and found myself favoring some of its unique features, including the repeat grid. I also learned the many aspects involved in progressive enhancement as I worked through this design process.'
+            },
+            {
                 title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
                 images: ['theatresnax/id_1.png', 'theatresnax/id_2.png', 'theatresnax/id_3.png', 'theatresnax/id_4.png']
             },
@@ -199,7 +203,7 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.RESEARCH_FINDINGS,
-                content: 'Feedback from the usability study was organized and analyzed to develop themes and insights. Most participants reported that TBD. Designs were iterated on based on these results.'
+                content: 'Feedback from the usability study was organized and analyzed to develop themes and insights. Most participants reported that there were some inconsistencies with button locations and styles. They also indicated that the user flow was a bit unclear and some navigation cues were missing. Designs were iterated on based on these results.'
             },
             {
                 title: SectionTitle.DESIGN_SOLUTION,
@@ -207,10 +211,10 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.CONCLUSION,
-                content: 'MovieSnax addresses the pain points of the current ordering process and provides a more convenient and efficient solution for customers. What are the next steps?'
+                content: 'MovieSnax addresses the pain points of the current ordering process and provides a more convenient and efficient solution for customers. Participants in the usability studies found TheaterSnax easy to navigate and could see themselves using the app regularly to simplify and destress their movie-going experience. Throughout the design process for this project, I learned more about the steps required to design efficiently and effectively using Adobe xD. I also learned visual design standards and the importance of accessibility features that make use of products or apps easier for all users. I would love to continue to test this design with users to further improve the user journey and address any additional pain points that may come up.'
             },
             {
-                images: ['theatresnax/featured_2_4x.png', 'theatresnax/featured_3_4x.png', 'theatresnax/featured_4_4x.png', 'theatresnax/featured_5_4x.png', 'theatresnax/featured_6_4x.png']
+                images: ['theatresnax/ns_grouped_1_4x.png', 'theatresnax/featured_3_4x.png', 'theatresnax/featured_4_4x.png', 'theatresnax/featured_5_4x.png', 'theatresnax/featured_6_4x.png']
             }
         ],
     },
@@ -270,6 +274,10 @@ export const projects: IProject[] = [
                 content: 'The target users of the app are residents of a neighborhood who are interested in staying informed about crime and safety threats in their area and connecting with their surrounding neighbors. These users may range in age and technical proficiency, but they all share a concern for the safety and security of their neighborhood.',
             },
             {
+                title: SectionTitle.CHALLENGES_AND_CONSTRAINTS,
+                content: 'One of the biggest challenges I faced while designing NeighborLynk was finding a way to incorporate useful features without losing sight of the overall goal of the app- to keep users informed and safe within their neighborhood. I had many ideas for what to include, but ultimately decided to choose a few of those ideas in order to keep the app easy to use and avoid overwhelming the users with too much to navigate. I did find there were many gaps in current available products that I was able to provide solutions for within my design.'
+            },
+            {
                 title: SectionTitle.RESEARCH_METHODOLOGY,
                 content: 'To better understand the needs and expectations of our target users, we conducted in-depth interviews with 20 residents of various neighborhoods. The interviews covered topics such as their current methods for staying informed about crime and safety threats, their concerns about crime and safety in their neighborhood, and their desired features in a neighborhood watch app.',
             },
@@ -290,7 +298,7 @@ export const projects: IProject[] = [
                 content: 'NeighborLynk provides residents with a way to stay informed about crime and safety threats in their area and connect with their surrounding neighbors. The app has been well-received by our target users, who appreciate the real-time notifications and the sense of community that the app provides. The app has helped to increase safety and security in neighborhoods, and has empowered residents to take an active role in ensuring the safety of their community.'
             },
             {
-                images: ['neighborlynk/featured_2_4x.png', 'neighborlynk/featured_3_4x.png']
+                images: ['neighborlynk/featured_2_4x.png', 'neighborlynk/ns_2_4x.png', 'neighborlynk/ns_3_4x.png']
             }
         ],
     }, 

@@ -3,8 +3,8 @@
 <rect x="2.65625" y="2.89062" width="28" height="28" fill="url(#pattern0)"/>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_114_164" transform="scale(0.0178571)"/>
+<use xlink:href="#image0_236_626" transform="scale(0.0178571)"/>
 </pattern>
-<image id="image0_114_164" width="56" height="56" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAQAAAACj/OVAAAA6UlEQVRYw+3XURGDMAwG4EpAAhKQMCl1sDqgDoYD5mASkICESoiEfw/rOgbjoQ3N3bY0Tw3HfXekKRcDIxtGQQUVVPC/wDMIJSugLwF7cJbLBwMLpHyQuxjgDAeLqxQY0MTMIAO+yt9kndpi0C5yIuCYMp3UoXm08SmzUZhtQZJtIdyHhCnG/GFPGOExxGeHgFPK2M3+lnrUwK5qXAHsVm+0b5WuAG7D1wY7jLigXdxFVcHnJ6RFJUPdQ7O9/hRUUMGfAIEQg3b2AKXcN/2AicWFfNCxQF8yrvnCgYb2ZycduRVUUEEFj4g7bjsxRbnIgRAAAAAASUVORK5CYII="/>
+<image id="image0_236_626" width="56" height="56" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAQAAAACj/OVAAAA6UlEQVRYw+3XURGDMAwG4EpAAhKQMCl1sDqgDoYD5mASkICESoiEfw/rOgbjoQ3N3bY0Tw3HfXekKRcDIxtGQQUVVPC/wDMIJSugLwF7cJbLBwMLpHyQuxjgDAeLqxQY0MTMIAO+yt9kndpi0C5yIuCYMp3UoXm08SmzUZhtQZJtIdyHhCnG/GFPGOExxGeHgFPK2M3+lnrUwK5qXAHsVm+0b5WuAG7D1wY7jLigXdxFVcHnJ6RFJUPdQ7O9/hRUUMGfAIEQg3b2AKXcN/2AicWFfNCxQF8yrvnCgYb2ZycduRVUUEEFj4g7bjsxRbnIgRAAAAAASUVORK5CYII="/>
 </defs>
 </svg>

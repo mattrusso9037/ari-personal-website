@@ -109,12 +109,21 @@ $transformation: all 2s ease;
 
 @media screen and (max-width: 600px) {
   .ProjectModalBody {
-    .content {
+    > div > .content {
       width: calc(100% - #{$baseUnit*2}px);
       padding: #{$baseUnit}px;
 
-      >img {
-        width: 300px;
+      > .heading_container {
+        >h2 {
+          font-size: $font-size-small-2;
+          &.description { 
+            font-size: $font-size-small-1;
+          }
+        }
+      }
+
+      > .featured-img {
+        width: 100%;
       }
     }
   }
