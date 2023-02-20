@@ -71,7 +71,7 @@ export const projects: IProject[] = [
         // image on top
         featuredImageUri: 'inventracker/featured_1_4x.png',
         // tile
-        thumbnailImageUri: 'inventracker_tile.png',
+        thumbnailImageUri: 'inventracker_tile.webp',
     },
     {
         title: 'Listen to the Angels',
@@ -123,7 +123,7 @@ export const projects: IProject[] = [
         // image on top
         featuredImageUri: 'ltta/featured.png',
         // tile
-        thumbnailImageUri: 'ltta_tile.png',
+        thumbnailImageUri: 'ltta_tile.webp',
     },
     {
         title: 'SimpliBudget',
@@ -132,7 +132,7 @@ export const projects: IProject[] = [
         // image on top
         featuredImageUri: 'simplibudget/featured_1_4x.png',
         // tile
-        thumbnailImageUri: 'simplibudget_tile.png',
+        thumbnailImageUri: 'simplibudget_tile.webp',
         sections: [
             {
                 title: SectionTitle.PROJECT_OVERVIEW,
@@ -171,7 +171,7 @@ export const projects: IProject[] = [
         // image on top
         featuredImageUri: 'theatresnax/featured_1_4x.png',
         // tile
-        thumbnailImageUri: 'theatresnax_tile.png',
+        thumbnailImageUri: 'theatresnax_tile.webp',
         sections: [
             {
                 title: SectionTitle.PROJECT_OVERVIEW,
@@ -225,7 +225,7 @@ export const projects: IProject[] = [
         // image on top
         featuredImageUri: 'dashboard/featured_1_4x.png',
         // tile
-        thumbnailImageUri: 'dash_tile.png',
+        thumbnailImageUri: 'dash_tile.webp',
         sections: [
             {
                 title: SectionTitle.PROJECT_OVERVIEW,
@@ -255,7 +255,7 @@ export const projects: IProject[] = [
         // image on top
         featuredImageUri: 'neighborlynk/featured_1_4x.png',
         // tile
-        thumbnailImageUri: 'neighborlynk_tile.png',
+        thumbnailImageUri: 'neighborlynk_tile.webp',
         sections: [
             {
                 title: SectionTitle.PROJECT_OVERVIEW,
