@@ -27,7 +27,7 @@ $transformation: all .5s ease;
     height: 100%;
     width: 100%;
     background: black;
-    opacity: .6;
+    opacity: .8;
     position: absolute;
     top: 0;
     left: 0;
@@ -37,17 +37,17 @@ $transformation: all .5s ease;
     transition: opacity .3s ease-in-out;
 
     &:hover {
-      opacity: .5;
+      opacity: .7;
     }
   }
 
   .content:hover + .overlay {
-      opacity: .5;
+      opacity: .7;
   }
 
   > .content {
     z-index: 3;
-    color: white;
+    color: $gray25;
     position: relative;
 
     > .description {

@@ -223,7 +223,7 @@ export const projects: IProject[] = [
         description: 'Auto Rotating Tablet Interface',
         technologiesUsed: [Technology.FIGMA],
         // image on top
-        featuredImageUri: 'dashboard/featured_1_4x.png',
+        featuredImageUri: 'dashboard/featured_1_2x.webp',
         // tile
         thumbnailImageUri: 'dash_tile.webp',
         sections: [
@@ -244,7 +244,7 @@ export const projects: IProject[] = [
                 content: 'I used this side project to explore and learn more about Figma and the many features it offers. I also explored many aspects of accessibility while designing this interface.'
             },
             {
-                images: ['dashboard/featured_2_4x.png']
+                images: ['dashboard/featured_2_4x.webp']
             }
         ],
     },
