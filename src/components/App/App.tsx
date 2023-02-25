@@ -31,15 +31,18 @@ function App() {
     }
 
     useEffect(() => {
+        if (!showModal) {
+            setSearchParams({});
+        }
         setShowNav(!showModal);
     }, [showModal]);
 
 
     useEffect(() => {
-        const id = Number(searchParams.get('id'));
+        const id = searchParams.get('id');
 
-        if (id >= 0) {
-            setProjectIndex(id);
+        if (id) {
+            setProjectIndex(Number(id));
             setShowModal(true);
         }
     }, [location.search]);
