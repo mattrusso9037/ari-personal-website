@@ -7,12 +7,11 @@ import { ProjectDisplay } from '../ProjectDisplay/ProjectDisplay';
 import { projects } from '../ProjectDisplay/projectConfiguration';
 import { Footer } from '../Footer/Footer';
 import { AboutMeCTA } from '../AboutMeCta/AboutMeCTA';
-import { CompanyDisplay } from '../CompanyDisplay/CompanyDisplay';
 import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBody';
 import { Modal } from '../common/Modal/Modal';
-import { Login } from '../Login/Login';
 import { ThemeContext } from '../../contexts/theme/themeContext';
 import { AppContext } from '../../contexts/app/appContext';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 
 function App() {
     const { getRef, scrollToElement } = useScroll();
@@ -21,15 +20,33 @@ function App() {
     const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
     const { appRef } = useContext(ThemeContext);
     const { setShowNav } = useContext(AppContext);
+    const [searchParams, setSearchParams] = useSearchParams();
+    const location = useLocation();
+    const navigate = useNavigate();
+
 
     function onProjectSelected(index: number): void {
-        setProjectIndex(index);
-        setShowModal(true);
+        console.log('117 onProjectSelected', index)
+        setSearchParams({
+            id: index.toString(),
+        });
+        location.search = searchParams.toString();
     }
 
     useEffect(() => {
         setShowNav(!showModal);
     }, [showModal]);
+
+
+    useEffect(() => {
+        const id = Number(searchParams.get('id'));
+
+        if (id >= 0) {
+            console.log('117 setting id', id)
+            setProjectIndex(id);
+            setShowModal(true);
+        }
+    }, [location.search]);
 
     return (
         <div>
