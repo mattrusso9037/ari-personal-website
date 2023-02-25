@@ -11,7 +11,7 @@ import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBod
 import { Modal } from '../common/Modal/Modal';
 import { ThemeContext } from '../../contexts/theme/themeContext';
 import { AppContext } from '../../contexts/app/appContext';
-import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 
 function App() {
     const { getRef, scrollToElement } = useScroll();
@@ -22,11 +22,8 @@ function App() {
     const { setShowNav } = useContext(AppContext);
     const [searchParams, setSearchParams] = useSearchParams();
     const location = useLocation();
-    const navigate = useNavigate();
-
 
     function onProjectSelected(index: number): void {
-        console.log('117 onProjectSelected', index)
         setSearchParams({
             id: index.toString(),
         });
@@ -42,7 +39,6 @@ function App() {
         const id = Number(searchParams.get('id'));
 
         if (id >= 0) {
-            console.log('117 setting id', id)
             setProjectIndex(id);
             setShowModal(true);
         }

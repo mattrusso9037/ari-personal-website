@@ -12,12 +12,13 @@ interface IProjectModalBodyProps {
 }
 
 export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) => {
-    function openLink(uri: string | undefined): void {
-        uri && window.open(uri, 'blank');
+    function openLink(partialPath: string | undefined): void {
+        const baseUrl = getUrl();
+        partialPath && window.open(`${baseUrl}/${partialPath}`, 'blank');
     }
     
     function getUrl(): string {
-        return window.location.href;
+        return window.location.origin;
     }
 
     return (
@@ -29,17 +30,8 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                         <h2 className={'description'}>
                             {project.description}
                         </h2>
-                        <div className={'technologies'}>
-                            <div>
-                                {project.technologiesUsed.map((item, index) => {
-                                    return (
-                                        <span className='item'>{item}</span>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                        </div>
-                    <img alt={`${project.title} featured image`} onClick={() => openLink(`${getUrl()}assets/projects/${project.featuredImageUri}`)} className='featured-img' src={`assets/projects/${project.featuredImageUri}`} />
+                    </div>
+                    <img alt={`${project.title} featured image`} onClick={() => openLink(`assets/projects/${project.featuredImageUri}`)} className='featured-img' src={`assets/projects/${project.featuredImageUri}`} />
                     
                     {project.sections.map((section) => <Section openLink={openLink} title={section.title} content={section.content} images={section.images} />)}
 
