@@ -27,6 +27,10 @@ export const projects: IProject[] = [
         title: 'InvenTracker',
         description: 'Inventory Tracking App',
         technologiesUsed: [Technology.FIGMA, Technology.GOOGLE_JAMBOARD],
+        // image on top
+        featuredImageUri: 'inventracker/featured_1_1x.webp',
+        // tile
+        thumbnailImageUri: 'inventracker_tile.webp',
         sections: [
             {
                 title: SectionTitle.PROJECT_OVERVIEW,
@@ -46,7 +50,7 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
-                images: ['inventracker/id_1_4x.png', 'inventracker/id_2_4x_grouped.png']
+                images: ['inventracker/id_1_1x.webp', 'inventracker/id_2_1x_grouped.webp']
             },
             {
                 title: SectionTitle.RESEARCH_METHODOLOGY,
@@ -68,10 +72,6 @@ export const projects: IProject[] = [
                 images: []
             }
         ],
-        // image on top
-        featuredImageUri: 'inventracker/featured_1_4x.png',
-        // tile
-        thumbnailImageUri: 'inventracker_tile.webp',
     },
     {
         title: 'Listen to the Angels',
@@ -93,7 +93,7 @@ export const projects: IProject[] = [
             {
                 title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
                 content: 'I looked into various nonprofit agency websites as part of a competitive audit, including others that support survivors of domestic violence,  to decide what features and information would be important to include in this design. The stakeholders provided a requirements list and a “nice to have” list that I was able to reference to be sure we included everything they were looking for, and provided insight on what features may work best from an accessibility point of view.',
-                images: ['ltta/idc_1.png', 'ltta/idc_2.png', 'ltta/idc_3.png']
+                images: ['ltta/ltta_id_1_1x.webp', 'ltta/ltta_id_2_1x.webp', 'ltta/ltta_id_3_1x.webp']
             },
             {
                 title: SectionTitle.RESEARCH_FINDINGS,
@@ -116,12 +116,12 @@ export const projects: IProject[] = [
                     <div>You can visit Listen to the Angels' website here!</div>
                     <a target='blank' href='https://listentotheangels.org'>listentotheangels.org</a>
                 </div>,
-                images: ['ltta/featured_3_4x.png', 'ltta/featured_4_4x.png']
+                images: ['ltta/featured_3_1x.webp', 'ltta/featured_4_1x.webp']
             },
 
         ],
         // image on top
-        featuredImageUri: 'ltta/featured.png',
+        featuredImageUri: 'ltta/featured_1x.webp',
         // tile
         thumbnailImageUri: 'ltta_tile.webp',
     },
@@ -130,7 +130,7 @@ export const projects: IProject[] = [
         description: 'Mobile App Redesign',
         technologiesUsed: [Technology.FIGMA],
         // image on top
-        featuredImageUri: 'simplibudget/featured_1_4x.png',
+        featuredImageUri: 'simplibudget/featured_1_1x.webp',
         // tile
         thumbnailImageUri: 'simplibudget_tile.webp',
         sections: [
@@ -141,7 +141,7 @@ export const projects: IProject[] = [
             {
                 title: SectionTitle.GOALS + ' & ' + SectionTitle.TARGET_USERS,
                 content: 'The goal of the SimpliBudget app is to provide an easy-to-use tool to keep track of monthly spending and/or saving. There is no specific target audience - this app is designed for those interested in taking control of their money on a monthly basis and improve spending habits. It is available for all ages.',
-                images: ['simplibudget/featured_2_4x.png']
+                images: ['simplibudget/featured_2_1x.webp']
             },
             {
                 title: SectionTitle.CHALLENGES_AND_CONSTRAINTS,
@@ -156,11 +156,11 @@ export const projects: IProject[] = [
                 content: 'Throughout the redesign process, I learned how to take an existing application and improve its design and user experience. I was able to make the components more simple and easy to read, and the application overall easier to navigate. I would like to continue to improve the application experience by developing insights from user feedback and iterating on the design.',
             },
             {
-                images: ['simplibudget/ns_grouped_1_4x.png', ]
+                images: ['simplibudget/ns_grouped_1_1x.webp', ]
             },
             {
                 title: 'Original Designs',
-                images: ['simplibudget/ns_grouped_2_4x.png']
+                images: ['simplibudget/ns_grouped_2_1x.webp']
             }
         ],
     },
@@ -169,7 +169,7 @@ export const projects: IProject[] = [
         description: 'Snack Ordering Responsive Web App',
         technologiesUsed: [Technology.ADOBEXD],
         // image on top
-        featuredImageUri: 'theatresnax/featured_1_4x.png',
+        featuredImageUri: 'theatresnax/featured_1_1x.webp',
         // tile
         thumbnailImageUri: 'theatresnax_tile.webp',
         sections: [
@@ -195,7 +195,7 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
-                images: ['theatresnax/id_1.png', 'theatresnax/id_2.png', 'theatresnax/id_3.png', 'theatresnax/id_4.png']
+                images: ['theatresnax/id_1.webp', 'theatresnax/id_2.webp', 'theatresnax/id_3.webp', 'theatresnax/id_4.webp']
             },
             {
                 title: SectionTitle.RESEARCH_METHODOLOGY,
@@ -214,7 +214,7 @@ export const projects: IProject[] = [
                 content: 'MovieSnax addresses the pain points of the current ordering process and provides a more convenient and efficient solution for customers. Participants in the usability studies found TheaterSnax easy to navigate and could see themselves using the app regularly to simplify and destress their movie-going experience. Throughout the design process for this project, I learned more about the steps required to design efficiently and effectively using Adobe xD. I also learned visual design standards and the importance of accessibility features that make use of products or apps easier for all users. I would love to continue to test this design with users to further improve the user journey and address any additional pain points that may come up.'
             },
             {
-                images: ['theatresnax/ns_grouped_1_4x.png', 'theatresnax/featured_3_4x.png', 'theatresnax/featured_4_4x.png', 'theatresnax/featured_5_4x.png', 'theatresnax/featured_6_4x.png']
+                images: ['theatresnax/ns_grouped_1_1x.webp', 'theatresnax/featured_3_1x.webp', 'theatresnax/featured_4_1x.webp', 'theatresnax/featured_5_1x.webp', 'theatresnax/featured_6_1x.webp']
             }
         ],
     },
@@ -253,7 +253,7 @@ export const projects: IProject[] = [
         description: 'Neighborhood Watch Web App',
         technologiesUsed: [Technology.FIGMA],
         // image on top
-        featuredImageUri: 'neighborlynk/featured_1_4x.png',
+        featuredImageUri: 'neighborlynk/featured_1_1x.webp',
         // tile
         thumbnailImageUri: 'neighborlynk_tile.webp',
         sections: [
@@ -283,7 +283,7 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
-                images: ['neighborlynk/id_1_4x.png', 'neighborlynk/id_2_4x.png']
+                images: ['neighborlynk/id_1_1x.webp']
             },
             {
                 title: SectionTitle.RESEARCH_FINDINGS,
@@ -298,7 +298,7 @@ export const projects: IProject[] = [
                 content: 'NeighborLynk provides residents with a way to stay informed about crime and safety threats in their area and connect with their surrounding neighbors. The app has been well-received by our target users, who appreciate the real-time notifications and the sense of community that the app provides. The app has helped to increase safety and security in neighborhoods, and has empowered residents to take an active role in ensuring the safety of their community.'
             },
             {
-                images: ['neighborlynk/featured_2_4x.png', 'neighborlynk/ns_2_4x.png', 'neighborlynk/ns_3_4x.png']
+                images: ['neighborlynk/featured_2_1x.webp', 'neighborlynk/featured_3_1x.webp', 'neighborlynk/featured_4_1x.webp']
             }
         ],
     }, 
