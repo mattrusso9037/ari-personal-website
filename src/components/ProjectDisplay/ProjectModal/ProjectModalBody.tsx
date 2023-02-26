@@ -29,6 +29,11 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                     <img alt={`${project.title} featured image`} onClick={() => openLink(`assets/projects/${project.featuredImageUri}`)} className='featured-img' src={`assets/projects/${project.featuredImageUri}`} />
                     
                     {project.sections.map((section) => <Section openLink={openLink} title={section.title} content={section.content} images={section.images} />)}
+  
+                    <section className='btn-container'>
+                        <button>Prev</button>
+                        <button>Next</button>
+                    </section>
                 </div>
             </div>
         </div>
