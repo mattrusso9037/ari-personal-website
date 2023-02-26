@@ -41,7 +41,6 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
         const sliderRef = useRef<HTMLDivElement>(null);
         const SCROLL_INTERVAL = 400;
 
-
         function onSlide(direction: 'left' | 'right') {
             if (sliderRef.current) {
                 const nextLeftValue = direction === 'left' ? sliderRef.current.scrollLeft - SCROLL_INTERVAL : sliderRef.current.scrollLeft + SCROLL_INTERVAL;
@@ -52,7 +51,6 @@ export const ProjectDisplay: React.FC<IProjectDisplayProps> =
                 });
             }
         }
-
 
         return (
             <Section className={'Projects'} title={'My Projects'} icon={Icon.Implementation}>
