@@ -3,7 +3,6 @@
 .Section.Contact {
     max-width: 1200px;
     margin: auto;
-    // height: 75vh;
     .body {
         display: flex;
         justify-content: center;
@@ -47,11 +46,9 @@
                     transition: .5s ease all;
                     &:hover {
                         transform: translateY(-20px);
-                        // animation: float 1.5s ease-in-out infinite;
                     }
                     img {
-                        width: 60px;
-                        height: 60px;
+                        padding-top: $padding-small-2;
                     }
                     &:hover {
                         text-decoration: none;
@@ -68,7 +65,6 @@
     .Section.Contact {
       padding: 0;
       width: calc(100% - #{$mobileLeftPadding*2});
-    //   height: 75%;
       > .section_inner {
         padding-top: 0;
         .thank_you {
@@ -88,17 +84,5 @@
             }
         }
       }
-    }
-  }
-
-  @keyframes float {
-    0% {
-      transform: translatey(0px);
-    }
-    50% {
-      transform: translatey(-20px);
-    }
-    100% {
-      transform: translatey(0px);
     }
   }

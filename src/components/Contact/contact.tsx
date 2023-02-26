@@ -8,6 +8,7 @@ import './contact.scss';
 export const Contact: React.FC = () => {
     const { appRef } = useContext(ThemeContext);
     const { openLink } = useOpenLink();
+    const ICON_SIZE = 32;
 
     return (
         <div ref={appRef} className={`App`}>
@@ -16,10 +17,10 @@ export const Contact: React.FC = () => {
             <div className="social_container">
                 <div>☺</div>
                 <ul>
-                    <li onClick={() => openLink(Link.Email)}><span>Email</span><img src={'assets/icons/email.svg'} /></li>
-                    <li onClick={() => openLink(Link.Linkedin)}><span>LinkedIn</span><img src={'assets/icons/linkedin.svg'} /></li>
-                    <li onClick={() => openLink(Link.Dribble)}><span>Dribble</span><img src={'assets/icons/dribble.svg'} /></li>
-                    <li onClick={() => openLink(Link.Behance)}><span>Behance</span><img src={'assets/icons/behance.svg'} /></li>
+                    <li onClick={() => openLink(Link.Email)}><span>Email</span><img height={ICON_SIZE} width={ICON_SIZE} src={'assets/icons/email_alt.svg'} /></li>
+                    <li onClick={() => openLink(Link.Linkedin)}><span>LinkedIn</span><img height={ICON_SIZE} width={ICON_SIZE} src={'assets/icons/linkedin_alt.svg'} /></li>
+                    <li onClick={() => openLink(Link.Dribble)}><span>Dribble</span><img height={ICON_SIZE} width={ICON_SIZE} src={'assets/icons/dribble_alt.svg'} /></li>
+                    <li onClick={() => openLink(Link.Behance)}><span>Behance</span><img height={ICON_SIZE} width={ICON_SIZE} src={'assets/icons/behance_alt.svg'} /></li>
                 </ul>
             </div>
         </Section>
