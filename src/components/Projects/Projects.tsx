@@ -13,7 +13,7 @@ export const Projects: React.FC =
         const { showModal, setShowModal, projectIndex } = useContext<IAppState>(AppContext);
 
         return (
-            <div className='Projects'>
+            <div className='ProjectsPage'>
                 <ProjectDisplay />
                 <Modal show={showModal} onClose={() => setShowModal(false)}>
                     <ProjectModalBody project={projects[projectIndex]} />
