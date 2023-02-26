@@ -6,7 +6,9 @@ import { ISize } from './ISize';
 import './projectDisplay.scss';
 import { Section } from "../common/Section/Section";
 import { Icon } from "../common/Icon";
-import { useRef } from 'react';
+import { useContext, useRef } from 'react';
+import { projects } from './projectConfiguration';
+import { AppContext, IAppState } from '../../contexts/app/appContext';
 
 const DEFAULT_THEME: ITheme = {
     primary: 'black',
@@ -19,27 +21,13 @@ const DEFAULT_DIMENSIONS: ISize = {
     width: '100%',
 }
 
-export interface IProjectDisplayProps {
-    projects: IProject[];
-    theme?: ITheme;
-    dimensions?: ISize;
-    showModal: boolean;
-    setShowModal: (show: boolean) => void;
-    onProjectSelected: any;
-}
 
 
-export const ProjectDisplay: React.FC<IProjectDisplayProps> =
-    ({
-        projects = [],
-        theme = DEFAULT_THEME,
-        dimensions = DEFAULT_DIMENSIONS,
-        showModal,
-        setShowModal,
-        onProjectSelected,
-    }) => {
+export const ProjectDisplay: React.FC =
+    ({}) => {
         const sliderRef = useRef<HTMLDivElement>(null);
         const SCROLL_INTERVAL = 400;
+        const { onProjectSelected } = useContext<IAppState>(AppContext);
 
         function onSlide(direction: 'left' | 'right') {
             if (sliderRef.current) {

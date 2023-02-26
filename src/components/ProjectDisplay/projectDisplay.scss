@@ -77,6 +77,9 @@ $carousel_height: 400px;
         scroll-snap-align: center;
         min-width: 400px;
         height: $carousel_height;
+         h3 {
+          text-align: center;
+         }
         a {
           text-decoration: none;
         }

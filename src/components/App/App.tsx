@@ -10,57 +10,20 @@ import { AboutMeCTA } from '../AboutMeCta/AboutMeCTA';
 import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBody';
 import { Modal } from '../common/Modal/Modal';
 import { ThemeContext } from '../../contexts/theme/themeContext';
-import { AppContext } from '../../contexts/app/appContext';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { AppContext, IAppState } from '../../contexts/app/appContext';
 
 function App() {
     const { getRef, scrollToElement } = useScroll();
-    const [showModal, setShowModal] = useState<boolean>(false);
-    const [projectIndex, setProjectIndex] = useState<number>(0);
-    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
     const { appRef } = useContext(ThemeContext);
-    const { setShowNav } = useContext(AppContext);
-    const [searchParams, setSearchParams] = useSearchParams();
-    const location = useLocation();
-
-    function onProjectSelected(index: number): void {
-        setSearchParams({
-            id: index.toString(),
-        });
-        location.search = searchParams.toString();
-    }
-
-    useEffect(() => {
-        if (!showModal) {
-            setSearchParams({});
-        }
-        setShowNav(!showModal);
-    }, [showModal]);
-
-
-    useEffect(() => {
-        const id = searchParams.get('id');
-
-        if (id) {
-            setProjectIndex(Number(id));
-            setShowModal(true);
-        } else {
-            setShowModal(false);
-        }
-    }, [location.search]);
-
+    const { showModal, setShowModal, projectIndex } = useContext<IAppState>(AppContext);
+    
     return (
         <div>
             <div ref={appRef} className={`App`}>
                 <>
                     <Header onAboutClick={scrollToElement} />
                     <div className={'main_content'}>
-                        <ProjectDisplay
-                            onProjectSelected={onProjectSelected}
-                            projects={projects}
-                            showModal={showModal}
-                            setShowModal={setShowModal}
-                        />
+                        <ProjectDisplay />
                         <AboutMeCTA aboutRef={getRef(Sections.About)} />
                         <Footer />
                     </div>
