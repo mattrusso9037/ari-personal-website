@@ -19,7 +19,7 @@ const jobs: IExpItem[] = [
     },
     {
         date: 'March 2021 - December 2022',
-        title: 'Listen to the EAC Network',
+        title: 'EAC Network',
         position: 'Crisis Counselor & Media Coordinator',
     },
 ];
@@ -56,7 +56,7 @@ export const ExperienceDisplay: React.FC = () => {
                             {educationItems.map((item) => <ExperienceItem item={item} />)}
                         </div>
                         <div className='resume'>
-                            <iframe width="400" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F8j0JcVKfX8bwywogoWipef%2FResume%3Fnode-id%3D502%253A48%26t%3D3rJj5j5MUCQNmL67-1"></iframe>
+                            <iframe width="400" height="500" src={'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F8j0JcVKfX8bwywogoWipef%2FResume%3Fnode-id%3D6%253A2%26t%3DFg4go0J6vZNYUa30-1'}></iframe>
                             <a href='https://drive.google.com/file/d/16TK_bU7NnIXFAkOdvOFT7034xlpWDOaa/view' target='_blank'>Download Resume</a>
                         </div>
                     </div>

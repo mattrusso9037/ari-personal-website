@@ -33,7 +33,7 @@ export const Header: FC<IHeaderProps> =
 
         return (
             <div className={'Header'}>
-                <h1>Hi I'm Ariana, an aspiring UX designer<br />from Long Island, New York.</h1>
+                <h1>Hi I'm Ariana, a UX designer<br />from Long Island, New York.</h1>
             </div>
         )
     };
