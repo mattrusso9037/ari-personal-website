@@ -25,9 +25,9 @@ $transformation: all 2s ease;
     width: calc(100% - 48px);
     gap: #{$baseUnit*4}px;
     padding: 24px; 
-    padding-bottom: 0;
     text-align: start;
     > .featured-img {
+      margin-top: $padding-small-1;
       max-height: 500px;
       width: fit-content;
     }
@@ -112,8 +112,8 @@ $transformation: all 2s ease;
   .ProjectModalBody {
     > div > .content {
       width: calc(100% - #{$baseUnit*2}px);
-      padding: #{$baseUnit}px;
-
+      padding: #{$baseUnit*3}px #{$baseUnit}px;
+      gap: 0;
       > .heading_container {
         >h2 {
           font-size: $font-size-small-2;

@@ -44,6 +44,8 @@ function App() {
         if (id) {
             setProjectIndex(Number(id));
             setShowModal(true);
+        } else {
+            setShowModal(false);
         }
     }, [location.search]);
 

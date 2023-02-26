@@ -1,5 +1,13 @@
 @import '../../common/variables';
 
+.Section.ExperienceDisplay {
+  > .section_inner {
+    > .body {
+      width: 100%;
+    }
+  }
+}
+
 .Section.About {
   color: $secondaryColor;
   padding-top: 0;
@@ -10,13 +18,14 @@
       margin-bottom: 40px;
     > h2 {
       color: $mocha;
+      }
     }
-  }
     > .body {
       display: flex;  
       flex-wrap: wrap;
       justify-content: space-evenly;
       font-size: $desktopBodyFontSize;
+      width: 100%;
       > div {
         display: flex;
         flex-direction: row;

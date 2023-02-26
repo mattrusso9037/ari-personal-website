@@ -1,4 +1,4 @@
-import React, { FC, useContext, useEffect } from 'react';
+import React, { FC, useContext } from 'react';
 import './about.scss';
 import { Section } from '../common/Section/Section';
 import { Icon } from '../common/Icon';
@@ -9,13 +9,6 @@ import { ThemeContext } from '../../contexts/theme/themeContext';
 export const About: FC = () => {
     const { appRef } = useContext(ThemeContext);
 
-    useEffect(() => {
-        setTimeout(() => {
-            const navBar = document.getElementsByClassName('Navbar')[0];
-            // TODO: Investigate why nav bar is hidden on about page sometimes.
-            navBar?.classList.add('show');
-        }, 500);
-    }, []);
     return (
         <div ref={appRef} className={`App`}>
             <>

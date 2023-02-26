@@ -15,6 +15,7 @@ $secondaryColor: $gray75;
 $bgColor: white;
 $debug_border: none;
 $box_shadow_1: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$box-shadow-2:  4px 4px 6px rgba(186, 130, 116, 0.5);
 $box_shadow_light: 2px 3px 5px -1px #999999;
 $bodyLineHeight: 32px;
 
@@ -74,6 +75,7 @@ $header1FontSize: 1.5rem;
 $font-size-small-1: 1rem;
 
 $font-size-small-2: 1.2rem;
+$font-size-small-3: 1.5rem; // 24px
 $font-size-medium-1: 2rem; // 32px
 
 $text-underline-offset-1: 4px;

@@ -1,4 +1,4 @@
-import React, { FC, MutableRefObject, useContext, useEffect, useRef, useState } from "react";
+import React, { FC, MutableRefObject, useContext, useEffect, useLayoutEffect, useRef, useState } from "react";
 import './section.scss';
 import { Icon } from "../Icon";
 import { ThemeContext } from "../../../contexts/theme/themeContext";
@@ -19,18 +19,24 @@ export const Section: FC<ISectionProps> = ({ className, title, locationRef, chil
     const hasBeenToggled = useRef<boolean>(false);
 
     useEffect(() => {
-        if (appRef?.current) {
-            if (elementIsInView(ref.current)) {
-                toggleViewStateTrue();
-            }
+        setTimeout(() => {
+            toggleViewStateTrue();
+        }, 100);
+    }, [])
 
-            appRef.current.addEventListener('scroll', _.throttle(onScroll, THROTTLE_TIME));
-        }
+    // useEffect(() => {
+    //     if (appRef?.current) {
+    //         if (elementIsInView(ref.current)) {
+    //             toggleViewStateTrue();
+    //         }
 
-        return () => {
-            appRef?.current?.removeEventListener('scroll', _.throttle(onScroll, THROTTLE_TIME))
-        }
-    }, []);
+    //         appRef.current.addEventListener('scroll', _.throttle(onScroll, THROTTLE_TIME));
+    //     }
+
+    //     return () => {
+    //         appRef?.current?.removeEventListener('scroll', _.throttle(onScroll, THROTTLE_TIME))
+    //     }
+    // }, []);
 
     function onScroll(e: Event) {
         if (!hasBeenToggled.current) {

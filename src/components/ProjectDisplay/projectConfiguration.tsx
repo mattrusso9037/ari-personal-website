@@ -24,56 +24,6 @@ enum Technology {
 
 export const projects: IProject[] = [
     {
-        title: 'InvenTracker',
-        description: 'Inventory Tracking App',
-        technologiesUsed: [Technology.FIGMA, Technology.GOOGLE_JAMBOARD],
-        // image on top
-        featuredImageUri: 'inventracker/featured_1_1x.webp',
-        // tile
-        thumbnailImageUri: 'inventracker_tile.webp',
-        sections: [
-            {
-                title: SectionTitle.PROJECT_OVERVIEW,
-                content: 'The goal of this project is to design and develop a mobile app for restaurants to track their ingredient inventory and generate reports for easy ordering from suppliers. The app will be designed to be user-friendly, efficient, and flexible, allowing restaurant management and staff to convert their inventory process with ease.'
-            },
-            {
-                title: SectionTitle.PROBLEM_STATEMENT,
-                content: 'Restaurants often struggle with keeping accurate track of their ingredient inventory, which can lead to waste, overspending, and reduced profits. In addition, manual tracking methods are time-consuming and error-prone, and it can be difficult to generate reports for accurately ordering necessary ingredients from suppliers.'
-            },
-            {
-                title: SectionTitle.GOALS,
-                content: 'To provide restaurants with a simple and accurate way to track their ingredient inventory that everyone can use.\nTo generate reports that make it easy for restaurants to order ingredients from suppliers when they are running low. \nTo reduce waste, overspending, and improve the bottom line by ensuring that restaurants have the ingredients they need, when they need them.'
-            },
-            {
-                title: SectionTitle.TARGET_USERS,
-                content: 'The target users of the app are restaurant managers, chefs, and kitchen staff who are responsible for tracking and managing the ingredient inventory. These users may range in technical proficiency, but they all share the goal of managing the restaurant\'s ingredient inventory efficiently and accurately.'
-            },
-            {
-                title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
-                images: ['inventracker/id_1_1x.webp', 'inventracker/id_2_1x_grouped.webp']
-            },
-            {
-                title: SectionTitle.RESEARCH_METHODOLOGY,
-                content: 'To better understand the needs and expectations of our target users, we conducted in-depth interviews with 20 restaurant managers, chefs, and kitchen staff. The interviews covered topics such as their current ingredient tracking methods, their biggest pain points with tracking inventory, and their desired features in an inventory tracking app.'
-            },
-            {
-                title: SectionTitle.RESEARCH_FINDINGS,
-                content: 'Most restaurants currently use manual methods to track their ingredient inventory, such as writing down inventory levels on paper or using spreadsheet software. \nThe biggest pain points with manual tracking methods include errors in inventory levels, difficulties in generating reports for ordering ingredients, and time-consuming manual updates. \nThe majority of restaurants desired a mobile app that was user-friendly, flexible, and that allowed them to track their ingredient inventory in real-time.'
-            },
-            {
-                title: SectionTitle.DESIGN_SOLUTION,
-                content: 'Based on our research, we designed a mobile app for restaurants to track their ingredient inventory and generate reports for ordering ingredients from suppliers. The app features an intuitive interface that allows restaurants to easily update their inventory levels and generate reports with just a few taps. \nThe app also integrates with the restaurant\'s existing suppliers, making it easy for restaurants to order ingredients when they are running low. In addition, the app provides real-time inventory updates, so that restaurants always know how much of each ingredient they have on hand.'
-            },
-            {
-                title: SectionTitle.CONCLUSION,
-                content: 'InvenTracker provides an efficient and accurate solution for restaurants to manage ingredient inventory. The app has been well-received by our target users, who appreciate the ease and flexibility of tracking their inventory and ordering ingredients from suppliers. The app has also helped restaurants reduce waste, overspending, and improve their bottom line by ensuring that they always have the ingredients they need, when they need them.'
-            },
-            {
-                images: []
-            }
-        ],
-    },
-    {
         title: 'Listen to the Angels',
         description: 'Responsive Website',
         technologiesUsed: [Technology.FIGMA, Technology.WORDPRESS],
@@ -219,33 +169,50 @@ export const projects: IProject[] = [
         ],
     },
     {
-        title: 'Personal Dashboard',
-        description: 'Auto Rotating Tablet Interface',
-        technologiesUsed: [Technology.FIGMA],
+        title: 'InvenTracker',
+        description: 'Inventory Tracking App',
+        technologiesUsed: [Technology.FIGMA, Technology.GOOGLE_JAMBOARD],
         // image on top
-        featuredImageUri: 'dashboard/featured_1_2x.webp',
+        featuredImageUri: 'inventracker/featured_1_1x.webp',
         // tile
-        thumbnailImageUri: 'dash_tile.webp',
+        thumbnailImageUri: 'inventracker_tile.webp',
         sections: [
             {
                 title: SectionTitle.PROJECT_OVERVIEW,
-                content: 'The goal of this project is to design and develop a responsive website that allows movie theater customers to order snacks from their seats, based on a prompt using Sharpen. The website will be integrated with the theater\'s existing point-of-sale (POS) system to ensure seamless and efficient order processing, complete with real-time delivery tracking.'
+                content: 'The goal of this project is to design and develop a mobile app for restaurants to track their ingredient inventory and generate reports for easy ordering from suppliers. The app will be designed to be user-friendly, efficient, and flexible, allowing restaurant management and staff to convert their inventory process with ease.'
             },
             {
                 title: SectionTitle.PROBLEM_STATEMENT,
-                content: 'Busy individuals often struggle to organize all of the important information they need in a simple and concise manner with little effort. Spending time gathering information from various apps to put everything together in one place, such as a physical planner or an app, makes it difficult to focus on other tasks at hand.'
+                content: 'Restaurants often struggle with keeping accurate track of their ingredient inventory, which can lead to waste, overspending, and reduced profits. In addition, manual tracking methods are time-consuming and error-prone, and it can be difficult to generate reports for accurately ordering necessary ingredients from suppliers.'
             },
             {
-                title: SectionTitle.GOALS + ' & ' + SectionTitle.TARGET_USERS,
-                content: 'The goal of this user interface is to have all of the user’s daily relevant information readily available in a simple and sleek dashboard. The target users would be busy professionals who have a lot going on throughout the day and are looking for a simple way to have it all in front of them in one space.',
+                title: SectionTitle.GOALS,
+                content: 'To provide restaurants with a simple and accurate way to track their ingredient inventory that everyone can use.\nTo generate reports that make it easy for restaurants to order ingredients from suppliers when they are running low. \nTo reduce waste, overspending, and improve the bottom line by ensuring that restaurants have the ingredients they need, when they need them.'
+            },
+            {
+                title: SectionTitle.TARGET_USERS,
+                content: 'The target users of the app are restaurant managers, chefs, and kitchen staff who are responsible for tracking and managing the ingredient inventory. These users may range in technical proficiency, but they all share the goal of managing the restaurant\'s ingredient inventory efficiently and accurately.'
+            },
+            {
+                title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
+                images: ['inventracker/id_1_1x.webp', 'inventracker/id_2_1x_grouped.webp']
+            },
+            {
+                title: SectionTitle.RESEARCH_METHODOLOGY,
+                content: 'To better understand the needs and expectations of our target users, we conducted in-depth interviews with 20 restaurant managers, chefs, and kitchen staff. The interviews covered topics such as their current ingredient tracking methods, their biggest pain points with tracking inventory, and their desired features in an inventory tracking app.'
+            },
+            {
+                title: SectionTitle.RESEARCH_FINDINGS,
+                content: 'Most restaurants currently use manual methods to track their ingredient inventory, such as writing down inventory levels on paper or using spreadsheet software. \nThe biggest pain points with manual tracking methods include errors in inventory levels, difficulties in generating reports for ordering ingredients, and time-consuming manual updates. \nThe majority of restaurants desired a mobile app that was user-friendly, flexible, and that allowed them to track their ingredient inventory in real-time.'
+            },
+            {
+                title: SectionTitle.DESIGN_SOLUTION,
+                content: 'Based on our research, we designed a mobile app for restaurants to track their ingredient inventory and generate reports for ordering ingredients from suppliers. The app features an intuitive interface that allows restaurants to easily update their inventory levels and generate reports with just a few taps. \nThe app also integrates with the restaurant\'s existing suppliers, making it easy for restaurants to order ingredients when they are running low. In addition, the app provides real-time inventory updates, so that restaurants always know how much of each ingredient they have on hand.'
             },
             {
                 title: SectionTitle.CONCLUSION,
-                content: 'I used this side project to explore and learn more about Figma and the many features it offers. I also explored many aspects of accessibility while designing this interface.'
-            },
-            {
-                images: ['dashboard/featured_2_4x.webp']
-            }
+                content: 'InvenTracker provides an efficient and accurate solution for restaurants to manage ingredient inventory. The app has been well-received by our target users, who appreciate the ease and flexibility of tracking their inventory and ordering ingredients from suppliers. The app has also helped restaurants reduce waste, overspending, and improve their bottom line by ensuring that they always have the ingredients they need, when they need them.'
+            },   
         ],
     },
     {
@@ -301,5 +268,36 @@ export const projects: IProject[] = [
                 images: ['neighborlynk/featured_2_1x.webp', 'neighborlynk/featured_3_1x.webp', 'neighborlynk/featured_4_1x.webp']
             }
         ],
-    }, 
+    },
+    {
+        title: 'Personal Dashboard',
+        description: 'Auto Rotating Tablet Interface',
+        technologiesUsed: [Technology.FIGMA],
+        // image on top
+        featuredImageUri: 'dashboard/featured_1_2x.webp',
+        // tile
+        thumbnailImageUri: 'dash_tile.webp',
+        sections: [
+            {
+                title: SectionTitle.PROJECT_OVERVIEW,
+                content: 'The goal of this project is to design and develop a responsive website that allows movie theater customers to order snacks from their seats, based on a prompt using Sharpen. The website will be integrated with the theater\'s existing point-of-sale (POS) system to ensure seamless and efficient order processing, complete with real-time delivery tracking.'
+            },
+            {
+                title: SectionTitle.PROBLEM_STATEMENT,
+                content: 'Busy individuals often struggle to organize all of the important information they need in a simple and concise manner with little effort. Spending time gathering information from various apps to put everything together in one place, such as a physical planner or an app, makes it difficult to focus on other tasks at hand.'
+            },
+            {
+                title: SectionTitle.GOALS + ' & ' + SectionTitle.TARGET_USERS,
+                content: 'The goal of this user interface is to have all of the user’s daily relevant information readily available in a simple and sleek dashboard. The target users would be busy professionals who have a lot going on throughout the day and are looking for a simple way to have it all in front of them in one space.',
+            },
+            {
+                title: SectionTitle.CONCLUSION,
+                content: 'I used this side project to explore and learn more about Figma and the many features it offers. I also explored many aspects of accessibility while designing this interface.'
+            },
+            {
+                images: ['dashboard/featured_2_4x.webp']
+            }
+        ],
+    },
+
 ];
