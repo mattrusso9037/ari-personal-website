@@ -3,33 +3,44 @@
 .Section.Contact {
     max-width: 1200px;
     margin: auto;
+    margin-top: 0;
+
     .body {
         display: flex;
         justify-content: center;
+
         .thank_you {
             font-size: 2rem;
-            color: $caramel;      
+            color: $mocha;
         }
+
         .social_container {
             margin-top: 16px;
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: center;
+
             >div {
                 font-size: 60px;
             }
-           
-            > ul {
+
+            >ul {
                 list-style-type: none;
                 padding-inline-start: 0;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 24px;
-                justify-content: center;
-                align-items: center;
+                // display: flex;
+                // flex-wrap: wrap;
+                display: grid;
+                // grid-template-columns: repeat(4, 275px);
+                // grid-template-columns: repeat(auto-fill, 275px);
+                grid-template-columns: repeat(4, minmax(100px, 1fr));
 
-                > li {
+                grid-auto-flow: column;
+                grid-gap: 24px;
+                // grid-template: 1fr 1fr 1fr / repeat(4, minmax(200px, 1fr));
+                justify-content: center;
+
+                >li {
                     width: 275px;
                     height: 200px;
                     background: $caramel;
@@ -44,12 +55,15 @@
                     font-style: italic;
                     font-size: $font-size-small-3;
                     transition: .5s ease all;
+
                     &:hover {
                         transform: translateY(-20px);
                     }
+
                     img {
                         padding-top: $padding-small-2;
                     }
+
                     &:hover {
                         text-decoration: none;
                         cursor: pointer;
@@ -60,29 +74,50 @@
     }
 }
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
     .Section.Contact {
-      padding: 0;
-      width: calc(100% - #{$mobileLeftPadding*2});
-      > .section_inner {
-        padding-top: 0;
-        .thank_you {
-           font-size: 1rem; 
-        }
-        .social_container {
-            font-size: 1.2rem; 
-            >div {
-                font-size: 40px;
-            }
-            > ul {
-                > li {
-                    width: 250px;
-                    height: 150px;
-                    font-size: 1.1rem;
+        .body {
+            .social_container {
+                > ul {
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-template-columns: repeat(2, 1fr);
                 }
             }
         }
-      }
     }
-  }
+}
+
+@media screen and (max-width: 600px) {
+    .Section.Contact {
+        padding: 0;
+        width: calc(100% - #{$mobileLeftPadding*2});
+
+        >.section_inner {
+            padding-top: 0;
+
+            .thank_you {
+                font-size: 1rem;
+            }
+
+            .social_container {
+                font-size: 1.2rem;
+
+                >div {
+                    font-size: 40px;
+                }
+
+                >ul {
+                    >li {
+                        width: 150px;
+                        height: 100px;
+                        font-size: 1.1rem;
+                        img {
+                            height: 24px;
+                            width: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

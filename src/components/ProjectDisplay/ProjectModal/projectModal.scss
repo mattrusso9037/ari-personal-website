@@ -2,7 +2,6 @@ $transformation: all 2s ease;
 @import '../../../common/variables';
 
 .ProjectModalBody {
-  height: 100%;
   width: 100%;
   display: flex;
   -webkit-transition: $transformation;
@@ -15,9 +14,8 @@ $transformation: all 2s ease;
     cursor: pointer;
   }
 
-
-
   .content {
+      height: 100%;
     max-width: $max_width;
     display: flex;
     flex-direction: column;
@@ -106,6 +104,12 @@ $transformation: all 2s ease;
       }
     }
   }
+  .btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: $spacing-small-2;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -120,6 +124,11 @@ $transformation: all 2s ease;
           &.description { 
             font-size: $font-size-small-1;
           }
+        }
+      }
+      .btn-container {
+        .Button {
+          width: 140px
         }
       }
 

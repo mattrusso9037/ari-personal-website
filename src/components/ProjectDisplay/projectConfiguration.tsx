@@ -212,7 +212,10 @@ export const projects: IProject[] = [
             {
                 title: SectionTitle.CONCLUSION,
                 content: 'InvenTracker provides an efficient and accurate solution for restaurants to manage ingredient inventory. The app has been well-received by our target users, who appreciate the ease and flexibility of tracking their inventory and ordering ingredients from suppliers. The app has also helped restaurants reduce waste, overspending, and improve their bottom line by ensuring that they always have the ingredients they need, when they need them.'
-            },   
+            },
+            {
+                images: ['inventracker/id_3_1x.webp']
+            }
         ],
     },
     {
@@ -250,7 +253,7 @@ export const projects: IProject[] = [
             },
             {
                 title: SectionTitle.INITIAL_DESIGN_CONCEPTS,
-                images: ['neighborlynk/id_1_1x.webp']
+                images: ['neighborlynk/george_link_1x.webp', 'neighborlynk/id_1_1x.webp']
             },
             {
                 title: SectionTitle.RESEARCH_FINDINGS,
