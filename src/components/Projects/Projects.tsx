@@ -6,6 +6,7 @@ import { projects } from '../ProjectDisplay/projectConfiguration';
 import { ProjectDisplay } from '../ProjectDisplay/ProjectDisplay';
 import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBody';
 import './projects.scss';
+import { Header } from '../Header/Header';
 
 export const Projects: React.FC =
     ({
@@ -14,6 +15,7 @@ export const Projects: React.FC =
 
         return (
             <div className='ProjectsPage'>
+                <Header>Projects</Header>
                 <ProjectDisplay />
                 <Modal show={showModal} onClose={() => setShowModal(false)}>
                     <ProjectModalBody project={projects[projectIndex]} />

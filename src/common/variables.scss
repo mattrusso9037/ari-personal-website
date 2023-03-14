@@ -82,3 +82,11 @@ $font-size-medium-1: 2rem; // 32px
 $text-underline-offset-1: 4px;
 
 $max-content-width: 1200px;
+
+@mixin header-styles {
+    font-size: $font-size-medium-1;
+    color: $mocha;
+//    @media screen and (max-width: 600px) {
+//
+//    }
+}

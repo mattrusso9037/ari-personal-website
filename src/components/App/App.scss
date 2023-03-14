@@ -12,6 +12,11 @@
   .main_content {
     background: white;
     perspective: 4px;
+    padding-top: 0;
+    > .Section {
+        padding: 0;
+        width: 100%;
+    }
   }
 }
 

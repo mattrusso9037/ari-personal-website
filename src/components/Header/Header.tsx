@@ -1,23 +1,18 @@
 import React, { FC, useContext } from 'react';
 import './header.scss';
 import { ScrollTo } from '../../hooks/useScroll';
-import { Sections } from '../App/SectionTypes';
 import { ThemeContext } from '../../contexts/theme/themeContext';
 import { ThemeType } from '../../contexts/theme/themeType';
 
 interface IHeaderProps {
-    onAboutClick: ScrollTo
+    onAboutClick?: ScrollTo;
 }
 
 export const Header: FC<IHeaderProps> =
     ({
-        onAboutClick,
+        children
     }) => {
         const { theme, setTheme } = useContext(ThemeContext);
-
-        function onClick(): void {
-            onAboutClick(Sections.About);
-        }
 
         function onThemeClick() {
             let nextTheme: ThemeType;
@@ -33,7 +28,7 @@ export const Header: FC<IHeaderProps> =
 
         return (
             <div className={'Header'}>
-                <h1>Hi I'm Ariana, a UX designer<br />from Long Island, New York.</h1>
+                <h1>{children}</h1>
             </div>
         )
     };

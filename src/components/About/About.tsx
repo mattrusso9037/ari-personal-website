@@ -5,6 +5,7 @@ import { Icon } from '../common/Icon';
 import { ExperienceDisplay } from "../ExperienceDisplay/ExperienceDisplay";
 import { Footer } from '../Footer/Footer';
 import { ThemeContext } from '../../contexts/theme/themeContext';
+import { Header } from '../Header/Header';
 
 export const About: FC = () => {
     const { appRef } = useContext(ThemeContext);
@@ -12,7 +13,8 @@ export const About: FC = () => {
     return (
         <div ref={appRef} className={`App`}>
             <>
-                <Section className={'About Me'} title={'About Me'} icon={Icon.Person}>
+                <Header>About Me</Header>
+                <Section className={'About Me'} icon={Icon.Person}>
                     <div>
                         <div className='tagline_container'>
                         <h2>I hope to use my knowledge and skills from my background in psychology to make an impact in UX design.</h2>
