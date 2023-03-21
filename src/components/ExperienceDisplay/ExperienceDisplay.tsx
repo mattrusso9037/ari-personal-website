@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Section } from '../common/Section/Section';
 import './experienceDisplay.scss';
-import {ExperienceItem} from './ExperienceItem/ExperienceItem';
 
 
 export interface IExpItem {
@@ -10,53 +9,20 @@ export interface IExpItem {
     position?: string;
 }
 
-
-const jobs: IExpItem[] = [
-    {
-        date: 'March 2022 - Present',
-        title: 'Listen to the Angels',
-        position: 'Freelance UX/UI Designer',
-    },
-    {
-        date: 'March 2021 - December 2022',
-        title: 'EAC Network',
-        position: 'Crisis Counselor & Media Coordinator',
-    },
-];
-
-const educationItems: IExpItem[] = [
-    {
-        date: 'January 2023',
-        title: 'Google UX Design Professional Certificate',
-    },
-    {
-        date: 'January 2021',
-        title: 'John Jay College of Criminal Justice',
-        position: 'MA Forensic Psychology',
-    },
-    {
-        date: 'August 2015',
-        title: 'Stony Brook University',
-        position: 'BA Psychology',
-    },
-];
-
 export const ExperienceDisplay: React.FC = () => {
     return (
         <Section title={''} className={'ExperienceDisplay'}>
             <div className={'ExperienceDisplay'}>
                 <div>
                     <h2>
-                        Experience & Resume
+                        Resume
                     </h2>
                     <div className='horizontal_row'>
-                        <div className='experience_items'>
-                            {jobs.map((item) => <ExperienceItem item={item} />)}
-                            <div className='subtitle'>Education & Certifications</div>
-                            {educationItems.map((item) => <ExperienceItem item={item} />)}
-                        </div>
                         <div className='resume'>
-                            <iframe width="400" height="500" src={'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F8j0JcVKfX8bwywogoWipef%2FResume%3Fnode-id%3D6%253A2%26t%3DFg4go0J6vZNYUa30-1'}></iframe>
+                            <picture>
+                                <source srcSet="/assets/images/resume.webp" type="image/webp" />
+                                <img src="/assets/images/resume.webp" alt="Ariana Brennan's Resume'" />
+                            </picture>
                             <a href='https://drive.google.com/file/d/16TK_bU7NnIXFAkOdvOFT7034xlpWDOaa/view' target='_blank'>Download Resume</a>
                         </div>
                     </div>
