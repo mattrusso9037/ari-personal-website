@@ -1,12 +1,11 @@
 import { IProject } from './IProject';
-import { Aurora } from "./Views/Aurora";
 import React from "react";
 
 enum SectionTitle {
     RESEARCH_METHODOLOGY = 'Research Methodology',
     RESEARCH_FINDINGS = 'Research Findings',
     DESIGN_SOLUTION = 'Design Solution',
-    CONCLUSION = 'Conclustion: What I Learned & Next Steps',
+    CONCLUSION = 'Conclusion: What I Learned & Next Steps',
     PROJECT_OVERVIEW = 'Project Overview',
     PROBLEM_STATEMENT = 'Problem Statement',
     GOALS = 'Goals',
