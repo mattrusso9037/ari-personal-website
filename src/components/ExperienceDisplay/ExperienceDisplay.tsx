@@ -23,7 +23,7 @@ export const ExperienceDisplay: React.FC = () => {
                                 <source srcSet="/assets/images/resume.webp" type="image/webp" />
                                 <img src="/assets/images/resume.webp" alt="Ariana Brennan's Resume'" />
                             </picture>
-                            <a href='https://drive.google.com/file/d/16TK_bU7NnIXFAkOdvOFT7034xlpWDOaa/view' target='_blank'>Download Resume</a>
+                            <a href='https://drive.google.com/file/d/1T6W42364kEFnrYd0b7kWfYtzswoKR1hi/view' target='_blank'>Download Resume</a>
                         </div>
                     </div>
                     <div className='certificate_badge'>
