@@ -26,7 +26,11 @@ export const About: FC = () => {
                         <div className={'description_container'}>
                             <h2>I hope to use my knowledge and skills from my background in psychology to make an impact in UX design.</h2>
                             <div>
-                                I have a strong background in Psychology, with a Masters in Forensic Psychology from John Jay College of Criminal Justice and Bachelors in Psychology from Stony Brook University. I have worked as a crisis counselor with a nonprofit for a program funded by FEMA in response to the pandemic for almost 2 years, providing support to the community and anyone struggling with the many challenges brought on by COVID. With this program, I was in charge of media development and social media campaigns, creating visuals for upcoming events, presentations and other media. I have recently completed the Google UX Design Certificate course through Coursera and have refreshed my research design and methodology skills through usability research. I hope to use my empathy and interest in the human mind and behavior to make an impact in the UX design space. In my free time, I enjoy spending time with my family, being outside, and diving deeper into my creativity with side projects.
+                            I have a background in Psychology and a passion for creating engaging, user-focused experiences via web and mobile applications. My knowledge and experience in psychology brings a deep understanding of human behavior and motivation to my work in UX design. 
+
+I have experience working in the nonprofit sector, from mental health services to websites and digital media. I had the opportunity to apply my skills through freelance work for a new local nonprofit, where I designed their website from wireframes and prototypes to launch with a team of developers, keeping the user top-of-mind. 
+
+I’m proficient in Figma and Adobe Creative Suite, and I’m always eager to learn new tools and techniques. In my free time, I enjoy experimenting with new design tools and refining my skills with side projects. My goal is to continue growing as a UX designer and to work on projects that make a positive impact on people's lives.
                             </div>
                         </div>
                     </div>
