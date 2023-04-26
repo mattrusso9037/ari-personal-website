@@ -70,12 +70,11 @@ Section.ExperienceDisplay {
         > span {
          
           > a {
-            // nherre
             text-underline-offset: $text-underline-offset-1;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
+            font-weight: bold;
             gap: 4px;
             > img {
               height: 20px;
