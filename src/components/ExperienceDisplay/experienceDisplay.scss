@@ -67,9 +67,22 @@ Section.ExperienceDisplay {
         justify-content: center;
         align-items: center;
 
-        >a {
-          margin-top: #{$baseUnit*4}px;
-          text-underline-offset: $text-underline-offset-1;
+        > span {
+         
+          > a {
+            // nherre
+            text-underline-offset: $text-underline-offset-1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            gap: 4px;
+            > img {
+              height: 20px;
+              width: 20px;
+            }
+          }
+        
         }
       }
     }

@@ -14,16 +14,15 @@ export const ExperienceDisplay: React.FC = () => {
         <Section title={''} className={'ExperienceDisplay'}>
             <div className={'ExperienceDisplay'}>
                 <div>
-                    <h2>
-                        Resume
-                    </h2>
                     <div className='horizontal_row'>
                         <div className='resume'>
-                            <picture>
-                                <source srcSet="/assets/images/resume.webp" type="image/webp" />
-                                <img src="/assets/images/resume.webp" alt="Ariana Brennan's Resume'" />
-                            </picture>
-                            <a href='https://drive.google.com/file/d/1T6W42364kEFnrYd0b7kWfYtzswoKR1hi/view' target='_blank'>Download Resume</a>
+                            <span>
+                                <a href='https://drive.google.com/file/d/1T6W42364kEFnrYd0b7kWfYtzswoKR1hi/view' target='_blank'>
+                                    Download Resume
+                                <img alt={'Open'} src={`/assets/icons/open_in_new.svg`}></img>
+                                    
+                                    </a>
+                            </span>
                         </div>
                     </div>
                     <div className='certificate_badge'>
