@@ -52,11 +52,10 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                     </div>
                     <img alt={`${project.title} featured image`} onClick={() => openLink(`assets/projects/${project.featuredImageUri}`)} className='featured-img' src={`assets/projects/${project.featuredImageUri}`} />
                     
-                    {project.sections.map((section) => <Section openLink={openLink} title={section.title} content={section.content} images={section.images} />)}
+                    {project.sections.map((section,) => <Section openLink={openLink} title={section.title} content={section.content} images={section.images} />)}
                     <div className='btn-container'>
-                    <Button type={'secondary'} text={'Previous Project'} onClick={() => onDirectionClick('prev') } />
-                    <Button type={'secondary'} text={'Next Project'} onClick={() => onDirectionClick('next')} />
-
+                    {projectIndex - 1 > -1 && <Button type={'secondary'} text={'Previous Project'} onClick={() => onDirectionClick('prev') } />}
+                    {projectIndex + 1 < projects.length && <Button type={'secondary'} text={'Next Project'} onClick={() => onDirectionClick('next')} />}
                     </div>
                 </div>
             </div>
