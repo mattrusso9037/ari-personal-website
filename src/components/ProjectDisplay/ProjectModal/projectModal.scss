@@ -36,17 +36,17 @@ $transformation: all 2s ease;
       align-items: center;
 
       >h2 {
+        color: $mauve;
         margin: 0;
         font-size: $font-size-medium-1;
-        color: $mauve;
-
-        &:last-of-type {
+      }
+      > h3 {
+        color: $gray85;
+          font-size: $font-size-small-2;
           font-style: italic;
           font-weight: 400;
-        }
-
+          margin-top: $padding-small-1;
       }
-
       >.technologies {
 
         >div {

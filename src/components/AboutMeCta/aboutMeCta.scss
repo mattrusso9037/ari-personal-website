@@ -24,8 +24,11 @@ $transformation: all .5s ease;
     width: 100%;
     gap: #{$baseUnit*8}px;
     text-align: left;
-    > div > h3 {
-      display: none;
+    align-items: center;
+    justify-content: center;
+    > div > h2 {
+      color: $mauve;
+      margin-bottom: 0;
     };
 
     img {
@@ -60,7 +63,7 @@ $transformation: all .5s ease;
     padding-bottom: #{$baseUnit*6}px;
     flex-direction: column-reverse !important;
     align-items: center;
-
+    justify-content: center;
     .AboutMeCta {
       margin-top: #{$baseUnit}px;
 
@@ -93,10 +96,11 @@ $transformation: all .5s ease;
           font-size: $mobileBodyFontSize;
           width: 100%;
           align-items: center;
+          justify-content: center;
           > picture {
             justify-self: start;
             >img {
-              width: 125px;
+              width: 150px;
               border-radius: 25px;
             }
           }
