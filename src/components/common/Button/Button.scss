@@ -39,4 +39,7 @@
   -o-transition: all .3s ease;
   transition: all .3s ease;
   color: white;
+  &:hover {
+    opacity: .8;
+  }
 }
