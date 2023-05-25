@@ -1,5 +1,6 @@
 import { IProject } from './IProject';
 import React from "react";
+import { ListenToTheAngels } from './ProjectModal/views/ListenToTheAngels';
 
 enum SectionTitle {
     RESEARCH_METHODOLOGY = 'Research Methodology',
@@ -222,7 +223,7 @@ export const projects: IProject[] = [
         description: 'Neighborhood Watch Web App',
         technologiesUsed: [Technology.FIGMA],
         // image on top
-        featuredImageUri: 'neighborlynk/featured_1_1x.webp',
+        featuredImageUri: 'neighborlynk_tile.webp',
         // tile
         thumbnailImageUri: 'neighborlynk_tile.webp',
         sections: [
@@ -271,35 +272,35 @@ export const projects: IProject[] = [
             }
         ],
     },
-    {
-        title: 'Personal Dashboard',
-        description: 'Auto Rotating Tablet Interface',
-        technologiesUsed: [Technology.FIGMA],
-        // image on top
-        featuredImageUri: 'dashboard/featured_1_2x.webp',
-        // tile
-        thumbnailImageUri: 'dash_tile.webp',
-        sections: [
-            {
-                title: SectionTitle.PROJECT_OVERVIEW,
-                content: 'The goal of this project is to design and develop a responsive website that allows movie theater customers to order snacks from their seats, based on a prompt using Sharpen. The website will be integrated with the theater\'s existing point-of-sale (POS) system to ensure seamless and efficient order processing, complete with real-time delivery tracking.'
-            },
-            {
-                title: SectionTitle.PROBLEM_STATEMENT,
-                content: 'Busy individuals often struggle to organize all of the important information they need in a simple and concise manner with little effort. Spending time gathering information from various apps to put everything together in one place, such as a physical planner or an app, makes it difficult to focus on other tasks at hand.'
-            },
-            {
-                title: SectionTitle.GOALS + ' & ' + SectionTitle.TARGET_USERS,
-                content: 'The goal of this user interface is to have all of the user’s daily relevant information readily available in a simple and sleek dashboard. The target users would be busy professionals who have a lot going on throughout the day and are looking for a simple way to have it all in front of them in one space.',
-            },
-            {
-                title: SectionTitle.CONCLUSION,
-                content: 'I used this side project to explore and learn more about Figma and the many features it offers. I also explored many aspects of accessibility while designing this interface.'
-            },
-            {
-                images: ['dashboard/featured_2_4x.webp']
-            }
-        ],
-    },
+    // {
+    //     title: 'Personal Dashboard',
+    //     description: 'Auto Rotating Tablet Interface',
+    //     technologiesUsed: [Technology.FIGMA],
+    //     // image on top
+    //     featuredImageUri: 'dashboard/featured_1_2x.webp',
+    //     // tile
+    //     thumbnailImageUri: 'dash_tile.webp',
+    //     sections: [
+    //         {
+    //             title: SectionTitle.PROJECT_OVERVIEW,
+    //             content: 'The goal of this project is to design and develop a responsive website that allows movie theater customers to order snacks from their seats, based on a prompt using Sharpen. The website will be integrated with the theater\'s existing point-of-sale (POS) system to ensure seamless and efficient order processing, complete with real-time delivery tracking.'
+    //         },
+    //         {
+    //             title: SectionTitle.PROBLEM_STATEMENT,
+    //             content: 'Busy individuals often struggle to organize all of the important information they need in a simple and concise manner with little effort. Spending time gathering information from various apps to put everything together in one place, such as a physical planner or an app, makes it difficult to focus on other tasks at hand.'
+    //         },
+    //         {
+    //             title: SectionTitle.GOALS + ' & ' + SectionTitle.TARGET_USERS,
+    //             content: 'The goal of this user interface is to have all of the user’s daily relevant information readily available in a simple and sleek dashboard. The target users would be busy professionals who have a lot going on throughout the day and are looking for a simple way to have it all in front of them in one space.',
+    //         },
+    //         {
+    //             title: SectionTitle.CONCLUSION,
+    //             content: 'I used this side project to explore and learn more about Figma and the many features it offers. I also explored many aspects of accessibility while designing this interface.'
+    //         },
+    //         {
+    //             images: ['dashboard/featured_2_4x.webp']
+    //         }
+    //     ],
+    // },
 
 ];
