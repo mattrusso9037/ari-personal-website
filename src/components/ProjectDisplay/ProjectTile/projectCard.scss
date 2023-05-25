@@ -26,7 +26,6 @@ $transformation: all .5s ease;
   > .overlay {
     height: 100%;
     width: 100%;
-    background: black;
     opacity: .4;
     position: absolute;
     top: 0;
@@ -34,15 +33,17 @@ $transformation: all .5s ease;
     right: 0;
     bottom: 0;
     z-index: 2;
-    transition: opacity .3s ease-in-out;
+    transition: all .3s ease-in-out;
 
     &:hover {
       opacity: .7;
+      background: black;
     }
   }
 
   .content:hover + .overlay {
       opacity: .7;
+      background: black;
   }
 
   > .content {
