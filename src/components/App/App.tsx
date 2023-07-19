@@ -12,7 +12,6 @@ import { Modal } from '../common/Modal/Modal';
 import { ThemeContext } from '../../contexts/theme/themeContext';
 import { AppContext, IAppState } from '../../contexts/app/appContext';
 import {Section} from "../common/Section/Section";
-import { InstagramGallery } from '../InstagramGallery/InstagramGallery';
 
 function App() {
     const { getRef, scrollToElement } = useScroll();
@@ -25,10 +24,9 @@ function App() {
                 <>
                     <Header onAboutClick={scrollToElement}>Hi I'm Ariana, a UX designer<br />from Long Island, New York.</Header>
                     <div className={'main_content'}>
-                        <Section>
+                        <Section title={''}>
                             <ProjectDisplay title={'My Projects'} />
                             <AboutMeCTA aboutRef={getRef(Sections.About)} />
-                            <InstagramGallery />
                         </Section>
                         <Footer />
                     </div>
