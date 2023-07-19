@@ -28,7 +28,6 @@ export const NavBar: React.FC = () => {
                     {showMenu ? <svg className='close_icon' onClick={onMenuClick} xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"/></svg> :
                         <svg onClick={onMenuClick} xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z" /></svg>}
                     <img src={'/assets/icons/ab_icon.svg'} />
-                    <div className='tagline'>Ariana Brennan <img src={'/assets/icons/stars.svg'} /> UX/UI Designer</div>
                 </div>
                 <div className={`link_container ${showMenu ? 'show' : 'hide'}`}>
                     <li onClick={onMenuClick} className={`${getClass('/')}`}>

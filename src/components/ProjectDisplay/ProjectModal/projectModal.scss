@@ -43,23 +43,13 @@ $transformation: all 2s ease;
         color: $mauve;
       }
 
-      >h3 {
-        margin: 0;
-        color: #424242;
-        font-family: Lato;
-        font-size: $font-size-small-4;
-        font-style: italic;
-        font-weight: 400;
-        line-height: 34px;
+      > h3 {
+        color: $gray85;
+          font-size: $font-size-small-2;
+          font-style: italic;
+          font-weight: 400;
+          margin-top: 0;
       }
-      // > h3 {
-      //   color: $gray85;
-      //     font-size: $font-size-small-2;
-      //     font-style: italic;
-      //     font-weight: 400;
-      //     margin-top: $padding-small-1;
-      //   color: $mauve;
-      // }
       >.technologies {
 
         >div {
