@@ -46,9 +46,9 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                 <div ref={ref} className={`content`}>
                     <div className='heading_container'>
                         <h2>{project.title}</h2>
-                        <h2 className={'description'}>
+                        <h3 className={'description'}>
                             {project.description}
-                        </h2>
+                        </h3>
                     </div>
                     <img alt={`${project.title} featured image`} onClick={() => openLink(`assets/projects/${project.featuredImageUri}`)} className='featured-img' src={`assets/projects/${project.featuredImageUri}`} />
                     
