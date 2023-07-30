@@ -108,10 +108,6 @@ export const projects: IProject[] = [
             {
                 images: ['simplibudget/ns_grouped_1_1x.webp', ]
             },
-            {
-                title: 'Original Designs',
-                images: ['simplibudget/ns_grouped_2_1x.webp']
-            }
         ],
     },
     {
