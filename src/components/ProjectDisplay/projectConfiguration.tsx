@@ -71,7 +71,7 @@ export const projects: IProject[] = [
 
         ],
         // image on top
-        featuredImageUri: 'ltta/featured_1x.webp',
+        featuredImageUri: 'ltta/LttA_desktop.webp',
         // tile
         thumbnailImageUri: 'ltta_tile.webp',
     },

@@ -6,6 +6,7 @@ import { Button } from '../../common/Button/Button';
 import { useContext, useRef } from 'react';
 import { AppContext } from '../../../contexts/app/appContext';
 import { projects } from '../projectConfiguration';
+import { Pill } from '../../Pill/Pill.tsx/Pill';
 interface IProjectModalBodyProps {
     project: IProject;
 }
@@ -49,6 +50,9 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                         <h3 className={'description'}>
                             {project.description}
                         </h3>
+                        <section className='label_container'>
+                            {project.technologiesUsed.map((technology) => <Pill label={technology} />)}
+                        </section>
                     </div>
                     <img alt={`${project.title} featured image`} onClick={() => openLink(`assets/projects/${project.featuredImageUri}`)} className='featured-img' src={`assets/projects/${project.featuredImageUri}`} />
                     

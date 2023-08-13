@@ -1,0 +1,7 @@
+@import '../../../common/variables';
+
+.Pill {
+    border: 2px solid $macchiato;
+    border-radius: $border-radius-1;
+    padding: 6px 15px;
+}

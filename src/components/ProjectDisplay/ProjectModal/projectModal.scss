@@ -58,7 +58,7 @@ $transformation: all 2s ease;
 
           >span {
             background: $caramel;
-            border-radius: $buttonBorderRadius;
+            border-radius: $border-radius-1;
             color: $white;
             padding: $padding-small-1;
           }
@@ -67,6 +67,10 @@ $transformation: all 2s ease;
         display: flex;
         flex-direction: column;
         margin-top: #{$baseUnit*2}px;
+      }
+      > .label_container {
+        display: flex;
+        gap: $padding-small-1;
       }
     }
 
