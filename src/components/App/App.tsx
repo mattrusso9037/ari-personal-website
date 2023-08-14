@@ -4,7 +4,7 @@ import { Header } from '../Header/Header';
 import { Sections } from './SectionTypes';
 import { useScroll } from '../../hooks/useScroll';
 import { ProjectDisplay } from '../ProjectDisplay/ProjectDisplay';
-import { projects } from '../ProjectDisplay/projectConfiguration';
+import { projectsNew } from '../ProjectDisplay/projectConfiguration';
 import { Footer } from '../Footer/Footer';
 import { AboutMeCTA } from '../AboutMeCta/AboutMeCTA';
 import { ProjectModalBody } from '../ProjectDisplay/ProjectModal/ProjectModalBody';
@@ -33,7 +33,7 @@ function App() {
                 </>
             </div>
             <Modal show={showModal} onClose={() => setShowModal(false)}>
-                <ProjectModalBody project={projects[projectIndex]} />
+                <ProjectModalBody project={projectsNew[projectIndex]} />
             </Modal>
         </div>
     );

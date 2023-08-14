@@ -1,0 +1,27 @@
+.LTTA {
+    width: 100%;
+    margin-top: 100px;
+    .TwoColumn {
+        &:not(:first-of-type) {
+            margin-top: 100px;
+        }
+    }
+    .ProjectSection {
+        &:not(:first-of-type) {
+            margin-top: 40px;
+        }
+        &.Goals > h4 {
+            margin-top: 0px;
+        }
+    }
+    
+    img {
+        width: 100%;
+    }
+
+    .img-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+}

@@ -1,9 +1,10 @@
 import * as React from 'react';
 import {IProject} from '../IProject';
 import './projectCard.scss';
+import { Project } from '../projectConfiguration';
 
 interface IProjectCardProps {
-    project: IProject;
+    project: Project;
     onProjectSelected: () => void;
 }
 

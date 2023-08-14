@@ -5,10 +5,11 @@ import { Section } from './Section';
 import { Button } from '../../common/Button/Button';
 import { useContext, useRef } from 'react';
 import { AppContext } from '../../../contexts/app/appContext';
-import { projects } from '../projectConfiguration';
+import { Project, projects, projectsNew } from '../projectConfiguration';
 import { Pill } from '../../Pill/Pill.tsx/Pill';
+import { ViewMap } from '../Views/viewMap';
 interface IProjectModalBodyProps {
-    project: IProject;
+    project: Project;
 }
 
 export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) => {
@@ -40,12 +41,12 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
         }
       
     }
-
+    // const proj2 = projectsNew'
     return (
-        <div className={`ProjectModalBody ${project.title.replaceAll(' ', '')}`}>
+        <section className={`ProjectModalBody ${project.title.replaceAll(' ', '')}`}>
             <div>
                 <div ref={ref} className={`content`}>
-                    <div className='heading_container'>
+                    <header className='heading_container'>
                         <h2>{project.title}</h2>
                         <h3 className={'description'}>
                             {project.description}
@@ -53,16 +54,18 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                         <section className='label_container'>
                             {project.technologiesUsed.map((technology) => <Pill label={technology} />)}
                         </section>
-                    </div>
+                    </header>
                     <img alt={`${project.title} featured image`} onClick={() => openLink(`assets/projects/${project.featuredImageUri}`)} className='featured-img' src={`assets/projects/${project.featuredImageUri}`} />
                     
-                    {project.sections.map((section,) => <Section openLink={openLink} title={section.title} content={section.content} images={section.images} />)}
+                    <Section title='Project Overview' content={project.overview} />
+                    {ViewMap[project.id].render(project)}
+                    {/* {project.sections.map((section,) => <Section openLink={openLink} title={section.title} content={section.content} images={section.images} />)} */}
                     <div className='btn-container'>
                     {projectIndex - 1 > -1 && <Button type={'secondary'} text={'Previous Project'} onClick={() => onDirectionClick('prev') } />}
                     {projectIndex + 1 < projects.length && <Button type={'secondary'} text={'Next Project'} onClick={() => onDirectionClick('next')} />}
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
