@@ -1,5 +1,9 @@
 import { Project } from "../projectConfiguration";
-import { LTTA } from "./ltta";
+import { InvenTracker } from "./inventracker/InvenTracker";
+import { LTTA } from "./ltta/ltta";
+import { NeighborLynk } from "./neighborlynk/NeighborLynk";
+import { SimpliBudget } from "./simplibudget/SimpliBudget";
+import { TheatreSnax } from "./theatresnax/TheatreSnax";
 
 
 export enum ProjectId {
@@ -15,23 +19,17 @@ export const ViewMap: Record<ProjectId, {render: (project: Project) => JSX.Eleme
         render: (project: Project) => <LTTA project={project} />
     },
     [ProjectId.SIMPLI_BUDGET]: {
-        render: function (project: Project): JSX.Element {
-            throw new Error("Function not implemented.");
-        }
+        render: (project: Project): JSX.Element => <SimpliBudget project={project} />
     },
     [ProjectId.THEATRE_SNAX]: {
-        render: function (project: Project): JSX.Element {
-            throw new Error("Function not implemented.");
-        }
+        render: (project: Project): JSX.Element => <TheatreSnax project={project} /> 
     },
     [ProjectId.INVEN_TRACKER]: {
-        render: function (project: Project): JSX.Element {
-            throw new Error("Function not implemented.");
-        }
+        render: (project: Project): JSX.Element => <InvenTracker project={project} /> 
+
     },
     [ProjectId.NEIGHBOR_LINK]: {
-        render: function (project: Project): JSX.Element {
-            throw new Error("Function not implemented.");
-        }
+        render: (project: Project): JSX.Element => <NeighborLynk project={project} /> 
+
     }
 }
