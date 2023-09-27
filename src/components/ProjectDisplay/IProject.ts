@@ -1,8 +1,11 @@
 import {FunctionComponent} from "react";
+import { ProjectId } from "./Views/viewMap";
 
 export interface IProject {
+    id: ProjectId;
     title: string;
     description: string;
+    overview: string;
     technologiesUsed: string[];
     sections: ISection[];
     featuredImageUri: string;

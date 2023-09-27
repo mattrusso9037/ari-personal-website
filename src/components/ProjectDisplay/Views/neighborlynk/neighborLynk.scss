@@ -1,0 +1,30 @@
+.CaseStudySection.NeighborLynk {
+   > .OneColumn {
+        &:first-of-type {
+            .img-container {
+                // gap: 28px;
+                img:last-of-type {
+                    margin-top: 28px;
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            .img-container {
+                // grid-template-columns: 1fr 1fr;
+                display: grid;
+                grid-gap: 24px;
+                img:first-of-type {
+                    grid-column: 1/span 2;
+                }
+                
+                img:nth-of-type(2) {
+                    grid-column: 1;
+                }
+                img:nth-of-type(3) {
+                    grid-column: 2;
+                }
+
+            }
+        }
+    }
+}

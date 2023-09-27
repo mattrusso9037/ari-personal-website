@@ -4,8 +4,9 @@ import './projectDisplay.scss';
 import { Section } from "../common/Section/Section";
 import { Icon } from "../common/Icon";
 import { useContext, useRef } from 'react';
-import { projects } from './projectConfiguration';
+// import { projects } from './pro]jectConfiguration';
 import { AppContext, IAppState } from '../../contexts/app/appContext';
+import { projectsNew } from './projectConfiguration';
 
 export const ProjectDisplay: React.FC<{title?: string}> =
     ({title}) => {
@@ -27,10 +28,10 @@ export const ProjectDisplay: React.FC<{title?: string}> =
         return (
             <Section className={'Projects'} title={title ?? ''} icon={Icon.Implementation}>
                 <div className={'ProjectDisplay'}>
-                    <img onClick={() => onSlide('left')} alt="Scroll left" src="/assets/icons/chevron_left.svg" />
-                    <img onClick={() => onSlide('right')} alt='Scroll right' src="/assets/icons/chevron_right.svg" />
+                    <img onClick={() => onSlide('left')} alt="Scroll left" src="/assets/icons/chevron-left.svg" />
+                    <img onClick={() => onSlide('right')} alt='Scroll right' src="/assets/icons/chevron-right.svg" />
                     <div ref={sliderRef} className={'project_container'}>
-                        {projects.map((project, index) => {
+                        {projectsNew.map((project, index) => {
                             return <ProjectCard key={project.title} project={project} onProjectSelected={() => onProjectSelected(index)} />
                         })}
                     </div>

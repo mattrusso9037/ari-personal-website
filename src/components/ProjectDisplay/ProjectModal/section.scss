@@ -4,8 +4,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: start;
+    text-align: start;
+    color: $mocha;
+    margin-top: 8px;
+
+    &.ProjectOverview {
+    }
     > h4 {
         margin-bottom: $padding-small-1
     }

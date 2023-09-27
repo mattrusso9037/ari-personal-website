@@ -50,7 +50,7 @@ $transition: all .3s ease-in;
       >li {
         list-style-type: none;
         padding: 10px;
-        border-radius: $buttonBorderRadius;
+        border-radius: $border-radius-1;
         transition: opacity .2 ease-in;
         &:hover {
           opacity: .8;

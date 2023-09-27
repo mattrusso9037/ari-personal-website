@@ -4,8 +4,10 @@ import './section.scss';
 interface IProps {
     title?: string;
     content?: string | JSX.Element;
+    /**Deprecated */
     images?: string[];
-    openLink: (url: string) => void;
+    /**Deprecated */
+    openLink?: (url: string) => void;
 }
 export const Section: React.FC<IProps> = ({title, content, images, openLink}) => {
     return (
