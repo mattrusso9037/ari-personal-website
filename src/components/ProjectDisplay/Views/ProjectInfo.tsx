@@ -10,7 +10,7 @@ export const ProjectInfo: React.FC<IProps> = ({project}) => {
     return (
         <>
             {project.problemStatement && <Section title={SectionTitle.PROBLEM_STATEMENT} content={project.problemStatement} />}
-            <Section title={SectionTitle.GOALS} content={project.goals} />
+            {project.goals && <Section title={SectionTitle.GOALS} content={project.goals} />}
             {project.targetUsers && <Section title={SectionTitle.TARGET_USERS} content={project.targetUsers} />}
             {project.challengesAndConstraints && <Section title={SectionTitle.CHALLENGES_AND_CONSTRAINTS} content={project.challengesAndConstraints} />
 }            <Section title={SectionTitle.INITIAL_DESIGN_CONCEPTS} content={project.initialDesignConcepts} />
