@@ -1,9 +1,24 @@
 .CaseStudySection {
     width: 100%;
 
+    .OneColumn:first-of-type {
+        .ProjectSection:first-of-type {
+            margin-top: 0px;
+            > h4 {
+                margin-top: 0px;
+            }
+        }
+    }
+    .OneColumn {
+        margin-top: 28px;
+    }
+
+    .row_2 > .img-container {
+        margin-top: 28px;
+    }
     // margin-top: 32px;
     .TwoColumn, .OneColumn {
-        padding: 48px 0;
+        // padding: 48px 0;
 
         // &:not(:first-of-type) {
         //     margin-top: 32px;
@@ -12,11 +27,11 @@
 
     .ProjectSection {
         &:not(:first-of-type) {
-            margin-top: 40px;
+            // margin-top: 40px;
         }
 
         &.Goals>h4 {
-            margin-top: 0px;
+            // margin-top: 0px;
         }
     }
 

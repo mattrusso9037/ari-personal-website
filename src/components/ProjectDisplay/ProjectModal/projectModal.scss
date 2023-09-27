@@ -21,12 +21,12 @@ $transformation: all 2s ease;
     flex-direction: column;
     align-items: center;
     width: calc(100% - 48px);
-    gap: #{$baseUnit*4}px;
+    // gap: #{$baseUnit*4}px;
     padding: 40px;
     text-align: start;
 
     >.featured-img {
-      margin-top: $padding-small-1;
+      margin-top: $margin-top-medium-2;
       max-height: 500px;
       width: fit-content;
       max-width: 400px;
@@ -118,6 +118,7 @@ $transformation: all 2s ease;
     width: 100%;
     justify-content: center;
     gap: $spacing-small-2;
+    margin-top: 48px;
   }
 }
 

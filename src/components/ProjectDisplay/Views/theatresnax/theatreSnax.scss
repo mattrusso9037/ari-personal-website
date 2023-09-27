@@ -1,0 +1,44 @@
+.CaseStudySection.Theatresnax {
+    .img-container {
+        display: grid;
+        grid-gap: 24px;
+    }
+    .OneColumn {
+        padding-top: 0px;
+        &:first-of-type {
+
+            .img-container {
+                grid-template-columns: 1fr 1fr;
+                
+                // img:first-of-type {
+                //     grid-column: 1;
+                // }
+                
+                // img:nth-of-type(2) {
+                //     grid-column: 1;
+                // }
+            
+            }
+        }
+        &:nth-of-type(2) {
+            .img-container {
+                // grid-template-columns: 1fr 1fr;
+                
+                img:first-of-type {
+                    grid-column: 1/span 2;
+                }
+                
+                img:nth-of-type(2) {
+                    grid-column: 1;
+                }
+                img:nth-of-type(3) {
+                    grid-column: 2;
+                    grid-row: 2/span 3
+                }
+                img:nth-of-type(4) {
+                    grid-column: 1;
+                }
+            }
+        }
+    }
+}
