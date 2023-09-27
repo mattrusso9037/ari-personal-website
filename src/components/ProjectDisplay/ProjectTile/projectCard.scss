@@ -74,6 +74,7 @@ $transformation: all .5s ease;
     -moz-transition: $transformation;
     -o-transition: $transformation;
     transition: $transformation;
+    pointer-events: none;
     > .content {
       opacity: 0;
       -webkit-transition: $transformation;
