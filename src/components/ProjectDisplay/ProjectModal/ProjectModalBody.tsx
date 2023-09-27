@@ -35,9 +35,11 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
         
         if (nextIndex > -1 && nextIndex < projectsNew.length) {
             onProjectSelected(nextIndex);
-            ref.current?.scrollIntoView({
-                behavior: 'smooth'
-            });
+            setTimeout(() => {
+                ref.current?.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }, 200)
         }
       
     }
