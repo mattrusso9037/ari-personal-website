@@ -72,7 +72,7 @@ $transformation: all .5s ease;
     opacity: 0;
     -webkit-transition: $transformation;
     -moz-transition: $transformation;
-    -o-transition: $transformati`on;
+    -o-transition: $transformation;
     transition: $transformation;
     pointer-events: none;
     > .content {
