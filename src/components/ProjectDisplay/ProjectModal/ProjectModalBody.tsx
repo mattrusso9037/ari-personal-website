@@ -35,14 +35,18 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
         
         if (nextIndex > -1 && nextIndex < projectsNew.length) {
             onProjectSelected(nextIndex);
-            setTimeout(() => {
-                ref.current?.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }, 200)
+            
         }
-      
     }
+
+    React.useEffect(() => {
+        setTimeout(() => {
+            ref.current?.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }, 300)
+    }, [projectIndex]);
+
     // const proj2 = projectsNew'
     return (
         <section className={`ProjectModalBody ${project.title.replaceAll(' ', '')}`}>
