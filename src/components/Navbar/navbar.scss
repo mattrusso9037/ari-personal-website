@@ -114,6 +114,8 @@ $transition: all .3s ease-in;
   .Navbar {
     .navbar_wrapper {
       > div {
+        justify-content: space-between;
+    width: 100%;
         > svg {
           display: block;
         }

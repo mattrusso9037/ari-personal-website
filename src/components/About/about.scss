@@ -77,7 +77,23 @@
   }
 }
 
-
+@media screen and (max-width: 900px) {
+  .Section.About.Me {
+    > .section_inner {
+      > .section_header {
+        > h2 {
+        }
+      }
+      > .body {
+      
+        > div {
+          width: 100%;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 600px) {
   .Section.About.Me {
     padding-bottom: 0;
