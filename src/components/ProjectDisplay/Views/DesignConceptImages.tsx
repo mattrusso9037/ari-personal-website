@@ -7,9 +7,12 @@ interface IProps {
 }
 
 export const DesignConceptImages: React.FC<IProps> = ({ project }) => {
+    
     return (
         <div className='img-container'>
-            {project.initialDesignConceptsImages.map((partialPath) => <img src={`assets/projects/${partialPath}`} />)}
+            {project.initialDesignConceptsImages?.map((partialPath) => { 
+                console.log('assets', `assets/projects/${partialPath}`);
+                return <img src={`assets/projects/${partialPath}`} />})}
         </div>
 
     )

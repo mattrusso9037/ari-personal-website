@@ -3,11 +3,11 @@ import './twoColumn.scss';
 
 interface IProps {
     leftColumn: JSX.Element;
-    rightColumn: JSX.Element;
+    rightColumn?: JSX.Element;
 }
 export const TwoColumn: React.FC<IProps> = ({leftColumn, rightColumn}) => {
     return (
-        <div className='TwoColumn'>
+        <div className={`TwoColumn`}>
             <div className='col_1'>
                 {leftColumn}
             </div>

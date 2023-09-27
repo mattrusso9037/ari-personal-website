@@ -13,7 +13,7 @@ interface IProps {
 
 export const NeighborLynk: React.FC<IProps> = ({ project }) => {
     return (
-        <section className='LTTA'>
+        <section className='CaseStudySection'>
             <TwoColumn leftColumn={<ProjectInfo project={project} />} rightColumn={<DesignConceptImages project={project} />} />
             <TwoColumn leftColumn={<ProjectImages project={project} />} rightColumn={<ProjectFindings project={project} />} />
         </section>

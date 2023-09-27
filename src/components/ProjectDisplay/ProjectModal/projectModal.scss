@@ -29,6 +29,7 @@ $transformation: all 2s ease;
       margin-top: $padding-small-1;
       max-height: 500px;
       width: fit-content;
+      max-width: 400px;
     }
 
     >.heading_container {
@@ -120,11 +121,11 @@ $transformation: all 2s ease;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .ProjectModalBody {
     >div>.content {
-      width: calc(100% - #{$baseUnit*2}px);
-      padding: #{$baseUnit*3}px #{$baseUnit}px;
+      width: calc(100% - 32px);
+      padding: #{$baseUnit*3}px #{$baseUnit*2}px;
       gap: 0;
 
       >.heading_container {

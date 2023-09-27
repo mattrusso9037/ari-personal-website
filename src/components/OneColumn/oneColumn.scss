@@ -1,8 +1,12 @@
-.TwoColumn {
+.OneColumn {
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 54px;
+    flex-direction: column;
+    .row_1, .row_2 {
+        width: 100%;
+    }
     .img-container {
         height: 100%;
         display: flex;
@@ -19,7 +23,7 @@
         width: 50%;
     }
 
-    .col_2 {
+    .row_2 {
         // opacity: 0;
         // transform: translateX(20px);
         
@@ -28,19 +32,19 @@
 }
 
 @media screen and (max-width: 800px) {
-    .TwoColumn {
-        flex-direction: column;
-        &:nth-child(even){
-            flex-direction: column-reverse;
-        }
-        align-items: center;
-        .col_1, .col_2 {
-            width: 100%;
-        }
-        .img-container {
-            gap: 32px;
-        }
+    // .TwoColumn {
+    //     flex-direction: column;
+    //     &:nth-child(even){
+    //         flex-direction: column-reverse;
+    //     }
+    //     align-items: center;
+    //     .col_1, .col_2 {
+    //         width: 100%;
+    //     }
+    //     .img-container {
+    //         gap: 32px;
+    //     }
 
-    }
+    // }
 }
 

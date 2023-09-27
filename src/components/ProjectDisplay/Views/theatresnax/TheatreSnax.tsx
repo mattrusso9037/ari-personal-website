@@ -6,6 +6,7 @@ import { ProjectInfo } from '../ProjectInfo';
 import { DesignConceptImages } from '../DesignConceptImages';
 import { ProjectImages } from '../ProjectImages';
 import { ProjectFindings } from '../ProjectFindings';
+import { OneColumn } from '../../../OneColumn/OneColumn';
 
 interface IProps {
     project: Project;
@@ -13,9 +14,9 @@ interface IProps {
 
 export const TheatreSnax: React.FC<IProps> = ({ project }) => {
     return (
-        <section className='LTTA'>
-            <TwoColumn leftColumn={<ProjectInfo project={project} />} rightColumn={<DesignConceptImages project={project} />} />
-            <TwoColumn leftColumn={<ProjectImages project={project} />} rightColumn={<ProjectFindings project={project} />} />
-        </section>
+        <section className='CaseStudySection'>
+        <OneColumn topRow={<ProjectInfo project={project} />} bottomRow={<DesignConceptImages project={project} />} />
+        <OneColumn topRow={<ProjectFindings project={project} />} bottomRow={<ProjectImages project={project} />} />
+    </section>
     )
 }

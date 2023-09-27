@@ -5,7 +5,7 @@ import { Section } from './Section';
 import { Button } from '../../common/Button/Button';
 import { useContext, useRef } from 'react';
 import { AppContext } from '../../../contexts/app/appContext';
-import { Project, projects, projectsNew } from '../projectConfiguration';
+import { Project, projectsNew } from '../projectConfiguration';
 import { Pill } from '../../Pill/Pill.tsx/Pill';
 import { ViewMap } from '../Views/viewMap';
 interface IProjectModalBodyProps {
@@ -33,7 +33,7 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
             nextIndex = projectIndex + 1;
         }
         
-        if (nextIndex > -1 && nextIndex < projects.length) {
+        if (nextIndex > -1 && nextIndex < projectsNew.length) {
             onProjectSelected(nextIndex);
             ref.current?.scrollIntoView({
                 behavior: 'smooth'
@@ -62,7 +62,7 @@ export const ProjectModalBody: React.FC<IProjectModalBodyProps> = ({project}) =>
                     {/* {project.sections.map((section,) => <Section openLink={openLink} title={section.title} content={section.content} images={section.images} />)} */}
                     <div className='btn-container'>
                     {projectIndex - 1 > -1 && <Button type={'secondary'} text={'Previous Project'} onClick={() => onDirectionClick('prev') } />}
-                    {projectIndex + 1 < projects.length && <Button type={'secondary'} text={'Next Project'} onClick={() => onDirectionClick('next')} />}
+                    {projectIndex + 1 < projectsNew.length && <Button type={'secondary'} text={'Next Project'} onClick={() => onDirectionClick('next')} />}
                     </div>
                 </div>
             </div>
